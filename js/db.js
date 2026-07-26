@@ -256,7 +256,7 @@
   function mergeNovel(dst, src) {
     let changed = false;
     const result = { ...dst };
-    const fields = ['mainTitle', 'originalTitle', 'author', 'overallReview', 'wordCount', 'chapterCount', 'volumeCount'];
+    const fields = ['mainTitle', 'originalTitle', 'author', 'description', 'overallReview', 'wordCount', 'chapterCount', 'volumeCount'];
     for (const f of fields) {
       if ((result[f] == null || result[f] === '') && (src[f] != null && src[f] !== '')) {
         result[f] = src[f];

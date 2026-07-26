@@ -70,6 +70,13 @@
         </div>
       </div>
 
+      ${novel.description ? `
+        <div class="section">
+          <h2>简介</h2>
+          <div class="description-text">${Utils.escapeHtml(novel.description)}</div>
+        </div>
+      ` : ''}
+
       ${novel.overallReview ? `
         <div class="section">
           <h2>整体评价</h2>

@@ -370,9 +370,18 @@ def scrape_novelia(session):
             author = author.strip() if isinstance(author, str) else ''
 
             # 小说 ID 与 URL
+            # novelia 详情页格式: https://n.novelia.cc/novel/{providerId}/{novelId}
             novel_id = (item.get('novelId') or item.get('id') or
                         item.get('novel_id') or item.get('bookId') or '')
-            novel_url = f'{api_base}/novel/{novel_id}' if novel_id else ''
+            provider_id = item.get('providerId') or item.get('provider_id') or ''
+            if novel_id and provider_id:
+                novel_url = f'{api_base}/novel/{provider_id}/{novel_id}'
+            elif novel_id:
+                novel_url = f'{api_base}/novel/{novel_id}'
+            else:
+                novel_url = ''
+            # 详情 API: https://n.novelia.cc/api/novel/{providerId}/{novelId}
+            novel_api_url = f'{api_base}/api/novel/{provider_id}/{novel_id}' if novel_id and provider_id else ''
 
             # 封面图
             cover_url = item.get('cover') or item.get('coverUrl') or item.get('coverImage') or item.get('img') or None
@@ -416,6 +425,9 @@ def scrape_novelia(session):
             # 同时保存日文标题作为 otherTitles
             if item.get('titleJp') and item.get('titleJp') != title:
                 record['otherTitles'] = [item['titleJp']]
+            # 保存详情 API URL 供 enrich 使用
+            if novel_api_url:
+                record['_detailApiUrl'] = novel_api_url
 
             records.append(record)
         except Exception as e:
@@ -424,47 +436,171 @@ def scrape_novelia(session):
     return records
 
 
-# ===== 详情页增强（OG 标签）=====
+# ===== 详情页增强 =====
 
 def enrich_with_og(session, records, base_url, limit=20):
-    """抓取详情页的 OG 标签，补充作者、标签等信息"""
+    """根据 source 调用对应的详情抓取器，补充作者、标签、封面、简介等信息"""
     enriched = []
     to_fetch = min(len(records), limit)
     for i, r in enumerate(records):
         out = dict(r)
-        if i < limit and r.get('links') and r['links'][0].get('url'):
-            link_url = r['links'][0]['url']
+        source = r.get('source')
+        if i < to_fetch:
             try:
-                resp = session.get(link_url, timeout=15)
-                if resp.status_code == 200:
-                    og = extract_og_tags(resp.text)
-                    if og.get('og:title') and not out.get('mainTitle'):
-                        out['mainTitle'] = og['og:title']
-                    author = og.get('og:novel:author') or og.get('article:author')
-                    if author and not out.get('author'):
-                        out['author'] = author
-                    tag = og.get('og:novel:novel_tag') or og.get('og:novel:tag')
-                    if tag:
-                        out['tags'] = [t.strip() for t in re.split(r'[,，、]', tag) if t.strip()]
-                    latest = og.get('og:novel:latest_chapter_name')
-                    if latest and not out.get('lastReadPosition'):
-                        out['lastReadPosition'] = {'type': 'chapter_name', 'value': latest}
-                    if og.get('og:image') and not out.get('coverImageUrl'):
-                        out['coverImageUrl'] = urljoin(base_url, og['og:image'])
-                    if og.get('og:novel:status'):
-                        out.setdefault('tags', [])
-                        if og['og:novel:status'] not in out['tags']:
-                            out['tags'].append(og['og:novel:status'])
-                    dprint(f'详情 [{i+1}/{to_fetch}] {out.get("mainTitle","")[:20]}: og:title={og.get("og:title","")[:30]}')
+                if source == 'esjzone':
+                    enrich_esjzone_detail(session, out, base_url)
+                elif source == 'novelia':
+                    enrich_novelia_detail(session, out)
                 else:
-                    dprint(f'详情 [{i+1}/{to_fetch}] HTTP {resp.status_code}')
+                    # 兜底：用通用 OG 标签
+                    if r.get('links') and r['links'][0].get('url'):
+                        enrich_generic_og(session, out, r['links'][0]['url'], base_url)
+                dprint(f'详情 [{i+1}/{to_fetch}] {out.get("mainTitle","")[:30]}: '
+                       f'封面={"有" if out.get("coverImageUrl") else "无"} '
+                       f'标签={len(out.get("tags", []))} '
+                       f'简介={"有" if out.get("description") else "无"}')
             except Exception as e:
                 dprint(f'详情 [{i+1}/{to_fetch}] 失败: {e}')
             time.sleep(0.15)  # 避免限流
             if (i + 1) % 5 == 0:
                 log(f'  详情页抓取进度: {i+1}/{to_fetch}')
+        # 清理临时字段
+        out.pop('_detailApiUrl', None)
         enriched.append(out)
     return enriched
+
+
+def enrich_esjzone_detail(session, out, base_url):
+    """抓取 esjzone 详情页，提取封面图、作者、其他書名、标签、简介"""
+    if not (out.get('links') and out['links'][0].get('url')):
+        return
+    link_url = out['links'][0]['url']
+    resp = session.get(link_url, timeout=15)
+    if resp.status_code != 200:
+        return
+    soup = BeautifulSoup(resp.text, 'html.parser')
+
+    # 封面图：.product-gallery img
+    if not out.get('coverImageUrl'):
+        gallery_img = soup.select_one('.product-gallery img')
+        if gallery_img:
+            src = gallery_img.get('src') or gallery_img.get('data-src') or ''
+            if src:
+                out['coverImageUrl'] = urljoin(base_url, src)
+
+    # 作者、其他書名：从 ul.book-detail li 提取
+    for li in soup.select('ul.book-detail li'):
+        text = li.get_text(strip=True)
+        if text.startswith('作者:'):
+            if not out.get('author'):
+                a = li.find('a')
+                if a:
+                    out['author'] = a.get_text(strip=True)
+        elif text.startswith('其他書名:') or text.startswith('其他书名:'):
+            # 提取 <strong> 之后的文本作为原始语言标题
+            other = li.get_text(strip=True).replace('其他書名:', '').replace('其他书名:', '').strip()
+            if other:
+                out.setdefault('otherTitles', [])
+                if other not in out['otherTitles']:
+                    out['otherTitles'].append(other)
+                if not out.get('originalTitle'):
+                    out['originalTitle'] = other
+
+    # 标签：.widget-tags a.tag（注意：不要用 a[href*="/tags/"]，会把作者误识别为标签）
+    tag_els = soup.select('.widget-tags a.tag')
+    if tag_els:
+        tags = [a.get_text(strip=True) for a in tag_els if a.get_text(strip=True)]
+        # 去重并保留顺序
+        existing = out.get('tags', [])
+        merged = list(existing)
+        for t in tags:
+            if t not in merged:
+                merged.append(t)
+        out['tags'] = merged
+
+    # 简介：.description
+    if not out.get('description'):
+        desc_el = soup.select_one('.description')
+        if desc_el:
+            # 保留段落结构，转为纯文本
+            desc_text = desc_el.get_text('\n', strip=True)
+            # 压缩多余空行
+            desc_text = re.sub(r'\n{3,}', '\n\n', desc_text)
+            if desc_text:
+                out['description'] = desc_text
+
+
+def enrich_novelia_detail(session, out):
+    """调用 novelia 详情 API，提取作者、简介、总字数、类型"""
+    api_url = out.get('_detailApiUrl')
+    if not api_url:
+        return
+    resp = session.get(api_url, timeout=15)
+    if resp.status_code != 200:
+        return
+    try:
+        data = resp.json()
+    except Exception:
+        return
+
+    # 作者：authors 数组
+    if not out.get('author') and data.get('authors'):
+        authors = data['authors']
+        if isinstance(authors, list) and authors:
+            names = [a.get('name', '').strip() for a in authors if isinstance(a, dict) and a.get('name')]
+            if names:
+                out['author'] = ' / '.join(names)
+
+    # 简介：introductionZh 优先，没有再用 introductionJp
+    if not out.get('description'):
+        desc = data.get('introductionZh') or data.get('introductionJp')
+        if desc and isinstance(desc, str):
+            out['description'] = desc.strip()
+
+    # 标签：keywords + attentions
+    existing_tags = out.get('tags', [])
+    merged = list(existing_tags)
+    for key in ('keywords', 'attentions'):
+        vals = data.get(key)
+        if isinstance(vals, list):
+            for v in vals:
+                v = str(v).strip()
+                if v and v not in merged:
+                    merged.append(v)
+    if merged:
+        out['tags'] = merged
+
+    # 总字数
+    if not out.get('wordCount') and data.get('totalCharacters'):
+        try:
+            out['wordCount'] = int(data['totalCharacters'])
+        except (TypeError, ValueError):
+            pass
+
+    # 类型（连载中/完结等）作为标签的一部分
+    if data.get('type'):
+        type_str = str(data['type']).strip()
+        if type_str and type_str not in out.get('tags', []):
+            out.setdefault('tags', [])
+            out['tags'].append(type_str)
+
+
+def enrich_generic_og(session, out, link_url, base_url):
+    """通用 OG 标签兜底"""
+    resp = session.get(link_url, timeout=15)
+    if resp.status_code != 200:
+        return
+    og = extract_og_tags(resp.text)
+    if og.get('og:title') and not out.get('mainTitle'):
+        out['mainTitle'] = og['og:title']
+    author = og.get('og:novel:author') or og.get('article:author')
+    if author and not out.get('author'):
+        out['author'] = author
+    tag = og.get('og:novel:novel_tag') or og.get('og:novel:tag')
+    if tag:
+        out['tags'] = [t.strip() for t in re.split(r'[,，、]', tag) if t.strip()]
+    if og.get('og:image') and not out.get('coverImageUrl'):
+        out['coverImageUrl'] = urljoin(base_url, og['og:image'])
 
 
 def extract_og_tags(html):
@@ -491,21 +627,63 @@ def extract_og_tags(html):
 # ===== 封面图下载 =====
 
 def download_covers(session, records):
-    """下载封面图，转为 base64（嵌入到导入数据中）"""
+    """下载封面图，转为 base64（嵌入到导入数据中）
+
+    部分图床（如 novelpia.com）返回 Content-Type: application/octet-stream，
+    但实际是图片。通过 URL 扩展名或文件头魔术字节判断。
+    """
     downloaded = 0
+    # 图片扩展名 -> MIME 类型映射
+    img_ext_map = {
+        '.jpg': 'image/jpeg', '.jpeg': 'image/jpeg',
+        '.png': 'image/png', '.gif': 'image/gif',
+        '.webp': 'image/webp', '.bmp': 'image/bmp',
+        '.file': 'image/jpeg',  # novelpia 的 .file 实际是 jpg
+    }
+    # 文件头魔术字节
+    def sniff_image(content):
+        if content.startswith(b'\xff\xd8\xff'):
+            return 'image/jpeg'
+        if content.startswith(b'\x89PNG\r\n\x1a\n'):
+            return 'image/png'
+        if content.startswith(b'GIF87a') or content.startswith(b'GIF89a'):
+            return 'image/gif'
+        if content[:4] == b'RIFF' and content[8:12] == b'WEBP':
+            return 'image/webp'
+        return None
+
     for r in records:
         url = r.get('coverImageUrl')
         if not url:
             continue
         try:
             resp = session.get(url, timeout=20)
-            if resp.status_code == 200 and resp.content:
-                content_type = resp.headers.get('Content-Type', 'image/jpeg')
-                if 'image' in content_type:
-                    b64 = base64.b64encode(resp.content).decode('ascii')
-                    r['_cover'] = b64
-                    r['_coverType'] = content_type
-                    downloaded += 1
+            if resp.status_code != 200 or not resp.content:
+                continue
+            content_type = resp.headers.get('Content-Type', '')
+            # 1. Content-Type 已是图片
+            if 'image' in content_type:
+                final_type = content_type
+            # 2. 用文件头判断
+            else:
+                sniffed = sniff_image(resp.content)
+                if sniffed:
+                    final_type = sniffed
+                # 3. 用 URL 扩展名判断
+                else:
+                    url_lower = url.lower().split('?')[0]
+                    final_type = None
+                    for ext, mime in img_ext_map.items():
+                        if url_lower.endswith(ext):
+                            final_type = mime
+                            break
+                    if not final_type:
+                        dprint(f'封面类型未知 {url}: Content-Type={content_type}')
+                        continue
+            b64 = base64.b64encode(resp.content).decode('ascii')
+            r['_cover'] = b64
+            r['_coverType'] = final_type
+            downloaded += 1
         except Exception as e:
             dprint(f'封面下载失败 {url}: {e}')
     log(f'  下载封面: {downloaded}/{sum(1 for r in records if r.get("coverImageUrl"))}')
@@ -600,6 +778,8 @@ def main():
 
     config = load_config()
     all_records = []
+    # 跟踪哪些源本次成功抓取，未成功的源将从旧备份保留
+    succeeded_sources = set()
 
     # ----- esjzone -----
     esj_cfg = config.get('esjzone')
@@ -619,6 +799,7 @@ def main():
                     log('下载封面图...')
                     records = download_covers(session, records)
             all_records.extend(records)
+            succeeded_sources.add('esjzone')
         else:
             log('esjzone 登录失败，跳过', 'warn')
     else:
@@ -642,10 +823,31 @@ def main():
                     log('下载封面图...')
                     records = download_covers(session, records)
             all_records.extend(records)
+            succeeded_sources.add('novelia')
         else:
             log('novelia 登录失败，跳过', 'warn')
     else:
         print('\n[2/2] 跳过 novelia.cc（未配置）')
+
+    # ----- 从旧备份补充未成功的源（避免数据丢失） -----
+    if succeeded_sources and SYNC_DATA_PATH.exists():
+        try:
+            with open(SYNC_DATA_PATH, 'r', encoding='utf-8') as f:
+                old_data = json.load(f)
+            old_novels = old_data.get('novels', []) if isinstance(old_data, dict) else []
+            # 按 source 分组旧数据
+            old_by_source = {}
+            for n in old_novels:
+                src = n.get('source')
+                if src:
+                    old_by_source.setdefault(src, []).append(n)
+            # 补充本次未成功的源
+            for src, novels in old_by_source.items():
+                if src not in succeeded_sources:
+                    log(f'保留上次 {src} 的 {len(novels)} 本小说（本次未抓取）', 'warn')
+                    all_records.extend(novels)
+        except Exception as e:
+            dprint(f'读取旧备份失败: {e}')
 
     # ----- 构建并保存数据 -----
     payload = {

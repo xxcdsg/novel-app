@@ -549,6 +549,7 @@ a:hover { color: var(--primary-hover); }
 }
 .review-entry .review-body { white-space: pre-wrap; color: var(--text); }
 .overall-review { white-space: pre-wrap; color: var(--text); line-height: 1.7; }
+.description-text { white-space: pre-wrap; color: var(--text); line-height: 1.7; }
 
 .file-list { display: flex; flex-direction: column; gap: 6px; }
 .file-item {
