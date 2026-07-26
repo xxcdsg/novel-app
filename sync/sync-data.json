@@ -1,305 +1,331 @@
 {
   "format": "novel-records-export",
   "version": 1,
-  "exportedAt": "2026-07-27T01:33:52.818499",
+  "exportedAt": "2026-07-27T01:49:05.102821",
   "novels": [
     {
-      "mainTitle": "那个男人的第 101 个坏结局",
-      "author": "아리앗",
-      "coverImageUrl": "https://images.novelpia.com/imagebox/cover/4c64a47a99e73ef4a2b465f1ad811343_332125_ori.file",
+      "mainTitle": "【完结】圣女大人，请自重！",
+      "author": "papapa",
+      "coverImageUrl": "https://p.sda1.dev/31/3408977fb88caafc458d30197f9d9217/ZW770_2_S5~5P@EFVM6SMPC.jpg",
       "lastReadPosition": {
         "type": "chapter_name",
-        "value": "51"
+        "value": "051 你在听我说话吗?"
       },
       "links": [
         {
           "label": "esjzone",
-          "url": "https://www.esjzone.cc/detail/1746961363.html"
+          "url": "https://www.esjzone.cc/detail/1740101659.html"
         }
       ],
       "source": "esjzone",
-      "sourceId": "1746961363",
-      "sources": [
-        "esjzone"
-      ],
-      "tags": [
-        "浪漫",
-        "幻想",
-        "后宫",
-        "后悔",
-        "回归",
-        "复仇"
-      ],
-      "_coverFile": "esjzone-1746961363.png",
-      "_coverType": "image/png"
-    },
-    {
-      "mainTitle": "使黑暗幻想正常化",
-      "author": "제팹가격인상니은",
-      "coverImageUrl": "https://images.novelpia.com/imagebox/cover/4b183b8581e86d45d764a4cd552eb341_288314_ori.file",
-      "lastReadPosition": {
-        "type": "chapter_name",
-        "value": "第91章 蓝莲花 克拉娜"
-      },
-      "links": [
-        {
-          "label": "esjzone",
-          "url": "https://www.esjzone.cc/detail/1739203440.html"
-        }
-      ],
-      "source": "esjzone",
-      "sourceId": "1739203440",
-      "sources": [
-        "esjzone"
-      ],
-      "tags": [
-        "后宫",
-        "奇幻",
-        "穿越",
-        "龙傲天",
-        "误解",
-        "欢乐"
-      ],
-      "description": "我所处于的世界是一个没有梦想或希望的黑暗奇幻游戏世界。\n完全没有感觉到。\ndeepseekv3机翻润色\n--------------------------------------------\n掌握了自动发文的方法，边发变润=v=，另外这作者真是一点也不关心插画，到现在都没有新的封面啊啊啊啊啊",
-      "_coverFile": "esjzone-1739203440.jpg",
-      "_coverType": "image/jpeg"
-    },
-    {
-      "mainTitle": "贞操逆转世界的童贞边境领主骑士",
-      "author": "道造",
-      "coverImageUrl": "https://cmoa.akamaized.net/data/image/title/title_1101357706/VOLUME/111013577060006.jpg",
-      "lastReadPosition": {
-        "type": "chapter_name",
-        "value": "第一百五十三话"
-      },
-      "links": [
-        {
-          "label": "esjzone",
-          "url": "https://www.esjzone.cc/detail/1652100515.html"
-        }
-      ],
-      "source": "esjzone",
-      "sourceId": "1652100515",
-      "sources": [
-        "esjzone"
-      ],
-      "tags": [
-        "R15",
-        "残酷描写",
-        "转生",
-        "冒險",
-        "異世界",
-        "日常"
-      ],
-      "description": "全部纯机翻，润色靠脑补",
-      "_coverFile": "esjzone-1652100515.jpg",
-      "_coverType": "image/jpeg"
-    },
-    {
-      "mainTitle": "转生为故事幕后主谋～用不断进化的魔剑和游戏知识压倒一切",
-      "author": "俺２号/結城 涼",
-      "coverImageUrl": "https://p.inari.site/usr/1309/696b28e27f481.png",
-      "lastReadPosition": {
-        "type": "chapter_name",
-        "value": "第三十六話 名为耶尔库克的精灵【前】"
-      },
-      "links": [
-        {
-          "label": "esjzone",
-          "url": "https://www.esjzone.cc/detail/1660575572.html"
-        }
-      ],
-      "source": "esjzone",
-      "sourceId": "1660575572",
+      "sourceId": "1740101659",
       "sources": [
         "esjzone"
       ],
       "otherTitles": [
-        "物語の黒幕に転生して ～進化する魔剣とゲーム知識ですべてをねじ伏せる"
+        "성녀님, 천박하세요!"
       ],
-      "originalTitle": "物語の黒幕に転生して ～進化する魔剣とゲーム知識ですべてをねじ伏せる",
+      "originalTitle": "성녀님, 천박하세요!",
       "tags": [
-        "R15",
-        "残酷描写",
-        "暴力描写",
-        "性描写",
-        "异世界",
-        "转生",
-        "剑与魔法",
-        "游戏世界",
-        "恋爱",
-        "多女主",
-        "贵族",
-        "大器晚成"
+        "R15+3",
+        "浪漫",
+        "奇幻",
+        "纯爱",
+        "身体互换",
+        "换身",
+        "TS",
+        "变嫁"
       ],
-      "description": "*2025.7.18\n已经在机翻站上传了文库版第六卷，推荐看文库版本而不是Web版\n——————小说简介——————\n有一款风靡全球的游戏叫「七英雄传说」 。\n莲因为以世界最快的速度通关了那个游戏的续篇，得以下载某個特别的档案。\n但是，在游戏里的任何地方都找不到那个档案 。\n就在莲准备放弃寻找的瞬间，\n画面上出现了写着「 要开始一个特别的故事吗？」的信息。\n毫不犹豫地选择了『是』的莲，就这样失去了意识，接着醒来时变成了婴儿——\n难道，我转世成为「七英雄传说」里的主人公了!?\n莲一直认为这是不可能的，但当他从母亲口中听到自己的名字时，不禁怀疑起自己的耳朵。\n因为那个名字，是故事中途背叛主人公们的同学的名字。\n他当然希望和平地生活。\n但是，却被在游戏中自己夺走过性命的圣女相遇且被亲近，\n而且还拯救了本应死去的角色（大贵族的爱女）。\n这些事情重叠在一起，展开了他所不知道的情节……\n※这里是web版！\n文庫版是在web版的基础上进行了很多修改。\n第１章也有几个场景的改变，调整等。\n（a. 只要狼哥事件是從主角７歲發生的。文庫是10歲）\nb. 『\nSteal\n』事件在文庫被改掉了，所以只要有這個事件的\n，都是Web版\n）\n无关性别，为了能让更多的人喜欢，希望大家一定也能欣赏到文庫版……!\n※另外，漫画版以文庫版为基准。\n※各位读者大人有意見也請投稿。",
-      "_coverFile": "esjzone-1660575572.png",
-      "_coverType": "image/png"
+      "description": "圣女大人说着粗俗的话。\n“哇，辣椒。”（韩语里可以指男性的OO）\n在我的身体里。\n——————\n超绝1v1纯爱，看得我自动变区\npapapa作品推荐\nts娘幼儿园：1023944990\n——————\n2025.12.31 重译开始\n2026.3.22 重译完成\n——————\n2.26接坑。机翻润色。\n男主名字由厄舍→亚瑟\n8.20接坑。使用lingua和火山dsv3翻译后润色。\n应该...能做完\n预计以每天十话左右的进度更新\nR18章节会在标题用“*”标出",
+      "_coverFile": "esjzone-1740101659.jpg",
+      "_coverType": "image/jpeg",
+      "id": "esjzone-1740101659"
     },
     {
-      "mainTitle": "【本篇完结】浪漫小说里的主角只喜欢我",
-      "author": "",
-      "coverImageUrl": null,
+      "mainTitle": "半吊子的圣职者想辞职",
+      "author": "와닷",
+      "coverImageUrl": "https://i.meee.com.tw/P8SE5yh.jpg",
       "lastReadPosition": {
         "type": "chapter_name",
-        "value": "关于封面"
+        "value": "第174话 恨罪不恨人"
       },
       "links": [
         {
           "label": "esjzone",
-          "url": "https://www.esjzone.cc/detail/1747642248.html"
+          "url": "https://www.esjzone.cc/detail/1744487290.html"
         }
       ],
       "source": "esjzone",
-      "sourceId": "1747642248",
-      "sources": [
-        "esjzone"
-      ]
-    },
-    {
-      "mainTitle": "转生为和风幻想的抑郁色情游戏的路人战斗员但是周围的女人都是恶鬼只有不祥的预感",
-      "author": "",
-      "coverImageUrl": null,
-      "lastReadPosition": {
-        "type": "chapter_name",
-        "value": "图画展示栏"
-      },
-      "links": [
-        {
-          "label": "esjzone",
-          "url": "https://www.esjzone.cc/detail/1658207522.html"
-        }
-      ],
-      "source": "esjzone",
-      "sourceId": "1658207522",
-      "sources": [
-        "esjzone"
-      ]
-    },
-    {
-      "mainTitle": "天下第一的青梅竹马",
-      "author": "우비람",
-      "coverImageUrl": "https://p.sda1.dev/21/c357c3fe65546ce44181e9a1e13ce559/a_1_.jpg",
-      "lastReadPosition": {
-        "type": "chapter_name",
-        "value": "125.这种事我怎么会知道！？"
-      },
-      "links": [
-        {
-          "label": "esjzone",
-          "url": "https://www.esjzone.cc/detail/1724568952.html"
-        }
-      ],
-      "source": "esjzone",
-      "sourceId": "1724568952",
-      "sources": [
-        "esjzone"
-      ],
-      "tags": [
-        "幻想",
-        "武侠",
-        "后宫",
-        "回归",
-        "重女",
-        "养成(?)"
-      ],
-      "description": "别做多余之事，先争取到那个位置吧…\n看到剧透言论会删除！！！\n机翻+润色\n几位大佬出了\n机翻教学\n，包含生肉获取，翻译器使用等。\n特别感谢\n蛤精\n大佬与VOID大佬。\n特别声明，本文机翻使用工具：\n▸\nKeywordGacha\n（术语表提取）\n▸\nLinguaGacha\n、\nAiNiee\n（翻译器）",
-      "_coverFile": "esjzone-1724568952.jpg",
-      "_coverType": "image/jpeg"
-    },
-    {
-      "mainTitle": "韩轻书单",
-      "author": "神圣女主角帝国公民",
-      "coverImageUrl": "https://images.novelpia.com/imagebox/cover/41bac78bc38f9ff9866868505f72a481_536126_ori.file",
-      "lastReadPosition": {
-        "type": "chapter_name",
-        "value": "病娇附身体质～因为骂娘被病娇包围了～"
-      },
-      "links": [
-        {
-          "label": "esjzone",
-          "url": "https://www.esjzone.cc/detail/1738832165.html"
-        }
-      ],
-      "source": "esjzone",
-      "sourceId": "1738832165",
-      "sources": [
-        "esjzone"
-      ],
-      "tags": [
-        "R18",
-        "书单",
-        "扫雷",
-        "评论",
-        "推荐"
-      ],
-      "description": "本书单是基于神圣女主角帝国群的群友们总结而来，只包含韩语轻小说内容，仅代表女主角群群友和参与评论的个人的观点，如有不同意的部分，请和谐讨论。\n欢迎大家在对应书目的章节下面发表自己的观点，我们群里也有很多本书没有人看过，欢迎补充。\n——群已经满人锁群了，请不要再私信问群号了，谢谢大家。\n韩语生肉提取韩语小说机翻教学[包括英肉教学]\nhttps://www.esjzone.one/detail/1744267467.html\n如果有站里已经上了但我还没贴链接的书可以在书单下面留言提醒我\nnovelpia生肉爬虫使用说明（需要novelpia会员）\nhttps://wwch.lanzoul.com/iNK7A2xs0ala",
-      "_coverFile": "esjzone-1738832165.png",
-      "_coverType": "image/png"
-    },
-    {
-      "mainTitle": "病娇附身体质～因为骂娘被病娇包围了～",
-      "author": "하잘",
-      "coverImageUrl": "https://images.novelpia.com/imagebox/cover/9e01bbc611316f21fbc99f66f3abe07f_7311774_q_ori.file",
-      "lastReadPosition": {
-        "type": "chapter_name",
-        "value": "EP3.前往安徽之路-5"
-      },
-      "links": [
-        {
-          "label": "esjzone",
-          "url": "https://www.esjzone.cc/detail/1740666012.html"
-        }
-      ],
-      "source": "esjzone",
-      "sourceId": "1740666012",
+      "sourceId": "1744487290",
       "sources": [
         "esjzone"
       ],
       "tags": [
         "R15+3",
+        "奇幻",
         "病娇",
-        "执着",
-        "附身",
-        "机翻"
+        "后宫",
+        "误解"
       ],
-      "description": "我成为了稳定维度的牺牲品。\n因为我亲切的慰问了说要让我转生的神的父母，所以变成了附身状态。\n注：将韩元除以200大概就是对应人民币的价值。",
-      "_coverFile": "esjzone-1740666012.png",
-      "_coverType": "image/png"
+      "description": "[小说简介]\n我想辞职，请让我辞职吧！\n[译者的话]\n我只是...看到有病娇就进来了.jpg\n我觉得比较有意思的点是双时间线的叙事方式，主角在[过去]干的事歪打正着对[现在]产生了重大的影响，而主要的笔墨放在[现在]，先果后因的故事看得比较乐。\n那主角能否在众病娇的包围下成功辞职呢？拭目以待吧！\n[补充]d老师在翻译西幻题材时，有时候的用词会莫名变得文绉绉，如果有难以理解的对话或者情节可以在评论区说一下，我会进行适当的修改(会有一定的初润但是只能确保我能看懂，不太确保每个人都能看懂)\n[补充]文中过多的心理活动可能会影响叙事节奏，会进行少量的删改\n[补充]会根据叙事节奏适当调整部分剧情，以获得更好观感（就我个人而言）的特供版\n文本使用的是蛤精大佬给的deepseek v3机翻版本\n会进行一定（请不要抱有过多期待的程度！）的润色\n本人非常杂食，不过最喜欢的tag是病娇和逆推，如果看到有趣的韩轻也可以联系我进行翻译，因为novelpia看得头大，很难找到想看的书\n请各位多多指教！",
+      "_coverFile": "esjzone-1744487290.jpg",
+      "_coverType": "image/jpeg",
+      "id": "esjzone-1744487290"
     },
     {
-      "mainTitle": "转生满25年的冒险家当上了学院教官",
-      "author": "최맹물",
-      "coverImageUrl": "https://img.remit.ee/api/file/BQACAgUAAyEGAASHRsPbAAEXQqZqV25eYAABzza0WUQ40pfE6RtN33QAAlQqAAJL8MFWjbMU5QteHM89BA.jpg",
+      "mainTitle": "【完结】前男友已售罄",
+      "author": "막둥둥이",
+      "coverImageUrl": "https://gitee.com/AILIIS/tupian/raw/master/林彩妍-2 EE.jpg",
       "lastReadPosition": {
         "type": "chapter_name",
-        "value": "同名同姓 -1-"
+        "value": "EP.1 甲乙恋爱的终结"
       },
       "links": [
         {
           "label": "esjzone",
-          "url": "https://www.esjzone.cc/detail/1781633262.html"
+          "url": "https://www.esjzone.cc/detail/1743066797.html"
         }
       ],
       "source": "esjzone",
-      "sourceId": "1781633262",
+      "sourceId": "1743066797",
+      "sources": [
+        "esjzone"
+      ],
+      "otherTitles": [
+        "전 남친이 품절됐다"
+      ],
+      "originalTitle": "전 남친이 품절됐다",
+      "tags": [
+        "R15+3",
+        "校园",
+        "现代",
+        "后宫",
+        "重女",
+        "病娇",
+        "修罗场",
+        "后悔系"
+      ],
+      "description": "我女朋友很仗势欺人。\n每当我的行为不合她心意时，她就会突然提出分手。\n然而，当我们真的分手后，她却总是围绕在我的身边。\n————————————————————————————————————\n新人接坑。\n本人外语0基础，边看边译，使用deepseek机翻+人工校对翻译，稍微带点润色。\n当初追这部小说刚看了一点就下架了，感到很遗憾，所以产生兴趣想补票。",
+      "_coverFile": "esjzone-1743066797.jpg",
+      "_coverType": "image/jpeg",
+      "id": "esjzone-1743066797"
+    },
+    {
+      "mainTitle": "关于以为转生到了萌系游戏大奖获奖作实际却是设定相似的洋馆恐怖游戏这件事",
+      "author": "シン・タロー",
+      "coverImageUrl": "https://p.sda1.dev/32/556683d47ddb050aee4dfe42e927d3e8/322602000211 _1_.jpg",
+      "lastReadPosition": {
+        "type": "chapter_name",
+        "value": "# 2"
+      },
+      "links": [
+        {
+          "label": "esjzone",
+          "url": "https://www.esjzone.cc/detail/1737610891.html"
+        }
+      ],
+      "source": "esjzone",
+      "sourceId": "1737610891",
+      "sources": [
+        "esjzone"
+      ],
+      "otherTitles": [
+        "萌えゲーアワード受賞作に転生できたと思ったら設定が似てる洋館ホラゲーだった件"
+      ],
+      "originalTitle": "萌えゲーアワード受賞作に転生できたと思ったら設定が似てる洋館ホラゲーだった件",
+      "tags": [
+        "R15",
+        "爱情喜剧",
+        "后宫",
+        "传奇",
+        "误会系",
+        "转生",
+        "地雷系",
+        "俺寻思",
+        "搞笑",
+        "人外",
+        "魔物娘"
+      ],
+      "description": "但是全员都被攻略了，所以没问题(⁠人⁠*⁠´⁠∀⁠｀⁠)⁠｡⁠*ﾟ⁠+\n深信自己转生到信奉的黄油【入住洋馆和奸吧♪和洋性咻♡】世界中的英一，喜出望外地造访了作为舞台的洋馆。\n面对冷酷的大屁股女仆。妖艳的长女、体弱多病有点阴沉的次女。以及狂傲的早熟三女，英一对即将上演的波涛汹涌色情日常充满期待。\n可是，这座洋馆其实是名为【豺狼之宴】、舞台背景和人物设定都与那款黄油极其相似的最吓人恐怖游戏的世界。\n英一对藏着残酷另一面的洋馆居民们一无所知，为了追求至高的成人场景而开始攻略。\n原文书籍化换了标题所以这边也换一下\n※旧题：你以为转生到了黄油里面？可惜，这是恐怖游戏哒/以为转生到获得萌游大奖的成人游戏中而高兴，实际却是设定相似的洋馆恐怖游戏/萌ゲーアワード受賞のアダルトゲーに転生したと喜んでたら実は設定が似通ったとある洋館ホラーゲーだった件\n-----------------------\n大家好，又是我真 纯爱战神开的新坑啦！\n这本书讲的是一个脑子秀逗的男主转生到了恐怖游戏世界利用俺寻思之力将所有地雷女主攻略的故事，希望大家能好好享受这充满误会系的展开！\n------------------------------\n由\nRozx\n和\n理想送别\n联合翻译(⁠ʘ⁠ᴗ⁠ʘ⁠✿⁠)\n2025.2.11，已追平原作进度，作者一般一到两周更新一次。\n2025.3.29，理想送别：补齐过去所有翻译中遗漏的注点，同时为配合注点更改了部分文字。\n⚠️\n注意：严禁剧透！剧透会被删留言哦！\n如果看见错字漏字或者语句不通顺的话，欢迎留言告知！\n------------------------------\n手机不知道为什么看不见动图，就放这里吧（悲",
+      "_coverFile": "esjzone-1737610891.jpg",
+      "_coverType": "image/jpeg",
+      "id": "esjzone-1737610891"
+    },
+    {
+      "mainTitle": "拔出圣剑",
+      "author": "NariaTa",
+      "coverImageUrl": "https://images.novelpia.com/imagebox/cover/14dd9471980a9a9a8ff66281e2223723_4116328_q_ori.file",
+      "lastReadPosition": {
+        "type": "chapter_name",
+        "value": "第89章 金币打造的钓钩(1)"
+      },
+      "links": [
+        {
+          "label": "esjzone",
+          "url": "https://www.esjzone.cc/detail/1743225217.html"
+        }
+      ],
+      "source": "esjzone",
+      "sourceId": "1743225217",
+      "sources": [
+        "esjzone"
+      ],
+      "tags": [
+        "幻想",
+        "星座",
+        "剑术大师",
+        "热血",
+        "浪漫",
+        "骑士精神",
+        "王道",
+        "后宫（？）"
+      ],
+      "description": "我在看不到星星的地方发誓。\n我会在夜空中刻上我自己的星星。",
+      "_coverFile": "esjzone-1743225217.png",
+      "_coverType": "image/png",
+      "id": "esjzone-1743225217"
+    },
+    {
+      "mainTitle": "我成为了背叛女主角们的幕后黑手",
+      "author": "아마테스형",
+      "coverImageUrl": "https://images.novelpia.com/imagebox/cover/12b4afb8c8ea7d391bea1ed6cc559077_13467513_q_ori.file",
+      "lastReadPosition": {
+        "type": "chapter_name",
+        "value": "EP.51 奇迹般的故事(1)"
+      },
+      "links": [
+        {
+          "label": "esjzone",
+          "url": "https://www.esjzone.cc/detail/1738797551.html"
+        }
+      ],
+      "source": "esjzone",
+      "sourceId": "1738797551",
+      "sources": [
+        "esjzone"
+      ],
+      "tags": [
+        "机翻",
+        "附身",
+        "学院",
+        "后宫",
+        "主角最强",
+        "奇幻",
+        "误解"
+      ],
+      "description": "附身到了在结局时背叛的幕后黑手身上。\n我对世界毁灭没什么兴趣，所以悠闲地等待着结局的到来，可是······\n“请一直留在我身边 。对我来说，从始至终都只有公子大人您一人。 ”\n“不要离开我\n。\n与其孤零零被抛下……我宁可死掉算了。 ”\n奇怪的是，女主角们却不断地对我产生兴趣。\n=========================\n已经完结了的韩文网络小说\n小说角色致敬了童话《小王子》\n译者也是边看边翻，根据后面的内容可能对前文进行修改\n结合gemini和deepseek-v4 的韩语机翻润色，第一次翻译，难免有很多没做好的地方，还希望多包容。",
+      "_coverFile": "esjzone-1738797551.jpg",
+      "_coverType": "image/jpeg",
+      "id": "esjzone-1738797551"
+    },
+    {
+      "mainTitle": "今天是昨天，明天是今天",
+      "author": "犬",
+      "coverImageUrl": "https://s1.imagehub.cc/images/2025/05/30/6d6b7297e529fe1c0ac3c14f48bd6ed9.jpg",
+      "lastReadPosition": {
+        "type": "chapter_name",
+        "value": "左"
+      },
+      "links": [
+        {
+          "label": "esjzone",
+          "url": "https://www.esjzone.cc/detail/1744918591.html"
+        }
+      ],
+      "source": "esjzone",
+      "sourceId": "1744918591",
       "sources": [
         "esjzone"
       ],
       "tags": [
         "R18",
-        "后宫",
-        "奇幻",
+        "萝莉",
+        "养成",
+        "调教",
         "日常",
-        "恋爱",
-        "学院",
-        "NTL",
-        "冒险者",
-        "BSS"
+        "光源氏",
+        "纯爱"
       ],
-      "description": "在主人公和女主入学的时候，我成为了学院的实战教官。\n机翻\n震惊了铁铁们！！原来隔壁机翻站是有这本书的，我之前想看没搜到才爬了生肉自己机翻来看，结果今天突然发现是我没有做成年人认证才没搜到....\n隔壁的是已经全部机翻完了，我想了一下既然都是机翻，那没必要继续翻了，如果有人想要继续翻的话可以接手噢(◕‿◕)\nb",
-      "_coverFile": "esjzone-1781633262.jpg",
-      "_coverType": "image/jpeg"
+      "description": "男人让花钱买来的少女服侍自己，作为回报则施以恩惠。\n在长久的共同生活中，情感逐渐滋生，他终于意识到，自己不知不觉间已将少女视为无可替代的家人，并对她产生了依赖。\n以男人的第一人称视角，追随着年龄差二十多岁的男女，缓慢而偏离正轨的生活。这是跨越二十二年，直至少女成为大人的物语。\n封面作者：\n川口イッサ @1ssaKawaguchi on X",
+      "_coverFile": "esjzone-1744918591.jpg",
+      "_coverType": "image/jpeg",
+      "id": "esjzone-1744918591"
+    },
+    {
+      "mainTitle": "【完结】成为公主深爱的父亲",
+      "author": "선선한선풍기",
+      "coverImageUrl": "https://images.novelpia.com/imagebox/28/2836857f24a1a36c69d89a36fac67d74_14199902_1749712612_ori.file",
+      "lastReadPosition": {
+        "type": "chapter_name",
+        "value": "233的书库"
+      },
+      "links": [
+        {
+          "label": "esjzone",
+          "url": "https://www.esjzone.cc/detail/1747244006.html"
+        }
+      ],
+      "source": "esjzone",
+      "sourceId": "1747244006",
+      "sources": [
+        "esjzone"
+      ],
+      "tags": [
+        "R15+3",
+        "幻想",
+        "后宫",
+        "浪漫",
+        "重女",
+        "病娇",
+        "逆推",
+        "后悔",
+        "伪乱伦",
+        "父嫁"
+      ],
+      "description": "暂时托付女儿给我的皇帝驾崩了\n......\n突然之间，我成为了公主的父亲\n采用ds V3翻译润色，r圣精选之臭豆腐，不可不尝。\n也推荐大伙看看我翻的其他书：\n233的书库",
+      "_coverFile": "esjzone-1747244006.png",
+      "_coverType": "image/png",
+      "id": "esjzone-1747244006"
+    },
+    {
+      "mainTitle": "在新手教程开始前，为了避免boss角色们被消灭我能做的几件事",
+      "author": "髙橋炬燵/ハイブリッジこたつ",
+      "coverImageUrl": "http://qungz.photo.store.qq.com/qun-qungz/V54dhYC61HsPn82wCaa41pLPfb0JqHkt/V5bCQA2ODM3MDkyMDStyrhpeR13Cw!!/800?w5=634&h5=900&rf=viewer_421",
+      "lastReadPosition": {
+        "type": "chapter_name",
+        "value": "第四话：起源终末装置希明莱瓦·阿尔比恩（后篇）"
+      },
+      "links": [
+        {
+          "label": "esjzone",
+          "url": "https://www.esjzone.cc/detail/1689480747.html"
+        }
+      ],
+      "source": "esjzone",
+      "sourceId": "1689480747",
+      "sources": [
+        "esjzone"
+      ],
+      "otherTitles": [
+        "新手教程开始前，为了让boss角色们不被消灭我能做的几件事"
+      ],
+      "originalTitle": "新手教程开始前，为了让boss角色们不被消灭我能做的几件事",
+      "tags": [
+        "异世界",
+        "转生",
+        "长篇",
+        "恋爱",
+        "游戏世界",
+        "死亡Flag踏破",
+        "男性主角",
+        "冒险",
+        "后宫(?)",
+        "喜剧"
+      ],
+      "description": "日文原名；チュートリアルが始まる前に～ボスキャラ達を破滅させない為に俺ができる幾つかの事\n本译文仅供个人学习交流使用，禁止作为商业用途使用，未经允许禁止转载。\n简介：\n睁开眼时，他已经转生到大型RPG游戏『精灵大战魔法迷宫』的世界中。\n然而，他不是主角，甚至连路人都不是。\n能力不行，性能差劲，口头禅是『嗨哈哈哈—』\n他转生成了命中注定要死在新手教程中的杂鱼boss\n不用说，他知道Dead End正在不久的将来等着自己。而他发现连自己最心爱的姐姐也注定要病死时......\n「 姐姐，我决定了。我要将这个世界上不讲理的规则，全部碾碎」\n因此，他决定利用前世丰富的游戏知识来反抗主线。\n然后，最强隐藏boss，游戏中最难路线的boss，他逐一将这个世界的boss们攻略成长为一个领导一群『怪物』 的首领。\n由boss角色们编织的故事，现在开幕！\n译：个人水平有限，文中有些地方的结尾会出现我发病写下来的内容，如果影响观看，请读者自行无视。前面为追求速度翻译质量极差，如果觉得观感较差建议去lk观看文库版第一卷后再回来观看后续内容（第一卷看完后从第15话外传1开始）。从本书Web版第一部结局（第八十六话外传3：明年也会再见）开始，剧情进展比较缓慢，如果是喜欢单线的读者，建议看完第一部结局就当作本书完结处理。\n讨论Q群：683709204",
+      "_coverFile": "esjzone-1689480747.jpg",
+      "_coverType": "image/jpeg",
+      "id": "esjzone-1689480747"
     },
     {
       "mainTitle": "你以为我为什么想当肉盾？因为我是抖M哒！只是不知道为什么队友却都病了",
@@ -345,322 +371,342 @@
       ],
       "description": "我明明只是想爽一下而已……\n损耗率超过80%的异常职业——「 肉盾」 。芬恩·德比尤拉在冒险者小队中被视作最廉价消耗品的这一职业里拥有绝对实力，而他其实是个超级抖M。\n痛苦即是快感。那种濒临死亡的恐惧让他欲罢不能。平时就因肾上腺素和多巴胺成瘾而大脑坏掉的他，通过一边保护遇到的同伴一边持续承受不至于致死的攻击，实现了工作与爱好的兼顾。然而有一天，小队成员却对他说：「 求求你，别再那样战斗了」 ……\n这是一个事到如今无法坦白自己是超级抖M、觉得痛苦很爽的主角，与无法忍受主角不断乱来的样子而产生极度沉重情感的女主角们，彼此交织碰撞出的最糟糕的误会系异世界奇幻故事。\n-------------------------------------------------------\nrozx\n：没错！又是我！这是本最近我发现的很乐的小说，男主是个神人抖M，自己爽就完事了。而且设定莫名的很眼熟……？（\n拼上性命避免了全灭的结局，可队友却病了\n），奇怪，是幻视嘛？先不管这些了，目前看下来无雷，也有着美味的\n曇らせ(治愈系)\n要素，可以好好期待下。\nGPT IMAGE 2 娘太强了……（开心）\n6.2.2026:\n上热门了！！我好感动！感谢大家的支持！！\n本书使用自研的\nTsukuyomi 月詠 - Moonlit Translator\n翻译，从今天开始你也可以成为翻译君o(*￣▽￣*)ブ\n-------------------------------------------------------\n顺便推下我开坑的其他小说：\n【神作】\n于是，他成为了异能\n【完结】\n脑破坏后被魅魔盯上的我，虽然以女友为目标被策划了NTR事件，但不知为何变成了后宫状态了哒(?)\n你以为转生到了贞操逆转世界里面？可惜，只是病娇哒\n你以为转生到了黄油里面？可惜，这是恐怖游戏哒\n（已由\n理想送别\n接手\n你以为转生成黄油世界的监禁反派了？可惜，只是被监禁哒！\n【完结】啊啊啊啊救命我的身体被魔剑控制了！！！\n【神作】\n虽然她们抽烟喝酒又赌博，但她们都是好女孩。只是不知何时起，她们看我的眼神有点糟糕了起来…\n【神作】\n我的异世界轮回play\n【完结】甩了我的美少女不知为何对我穷追不舍\n【完结】转生为父控女儿的同学后，女儿竟然馋我身子，但是我拒绝！\n【断更】美少女全都是地雷！！！",
       "_coverFile": "esjzone-1766507963.png",
-      "_coverType": "image/png"
+      "_coverType": "image/png",
+      "id": "esjzone-1766507963"
     },
     {
-      "mainTitle": "在新手教程开始前，为了避免boss角色们被消灭我能做的几件事",
-      "author": "髙橋炬燵/ハイブリッジこたつ",
-      "coverImageUrl": "http://qungz.photo.store.qq.com/qun-qungz/V54dhYC61HsPn82wCaa41pLPfb0JqHkt/V5bCQA2ODM3MDkyMDStyrhpeR13Cw!!/800?w5=634&h5=900&rf=viewer_421",
+      "mainTitle": "转生满25年的冒险家当上了学院教官",
+      "author": "최맹물",
+      "coverImageUrl": "https://img.remit.ee/api/file/BQACAgUAAyEGAASHRsPbAAEXQqZqV25eYAABzza0WUQ40pfE6RtN33QAAlQqAAJL8MFWjbMU5QteHM89BA.jpg",
       "lastReadPosition": {
         "type": "chapter_name",
-        "value": "第四话：起源终末装置希明莱瓦·阿尔比恩（后篇）"
+        "value": "同名同姓 -1-"
       },
       "links": [
         {
           "label": "esjzone",
-          "url": "https://www.esjzone.cc/detail/1689480747.html"
+          "url": "https://www.esjzone.cc/detail/1781633262.html"
         }
       ],
       "source": "esjzone",
-      "sourceId": "1689480747",
-      "sources": [
-        "esjzone"
-      ],
-      "otherTitles": [
-        "新手教程开始前，为了让boss角色们不被消灭我能做的几件事"
-      ],
-      "originalTitle": "新手教程开始前，为了让boss角色们不被消灭我能做的几件事",
-      "tags": [
-        "异世界",
-        "转生",
-        "长篇",
-        "恋爱",
-        "游戏世界",
-        "死亡Flag踏破",
-        "男性主角",
-        "冒险",
-        "后宫(?)",
-        "喜剧"
-      ],
-      "description": "日文原名；チュートリアルが始まる前に～ボスキャラ達を破滅させない為に俺ができる幾つかの事\n本译文仅供个人学习交流使用，禁止作为商业用途使用，未经允许禁止转载。\n简介：\n睁开眼时，他已经转生到大型RPG游戏『精灵大战魔法迷宫』的世界中。\n然而，他不是主角，甚至连路人都不是。\n能力不行，性能差劲，口头禅是『嗨哈哈哈—』\n他转生成了命中注定要死在新手教程中的杂鱼boss\n不用说，他知道Dead End正在不久的将来等着自己。而他发现连自己最心爱的姐姐也注定要病死时......\n「 姐姐，我决定了。我要将这个世界上不讲理的规则，全部碾碎」\n因此，他决定利用前世丰富的游戏知识来反抗主线。\n然后，最强隐藏boss，游戏中最难路线的boss，他逐一将这个世界的boss们攻略成长为一个领导一群『怪物』 的首领。\n由boss角色们编织的故事，现在开幕！\n译：个人水平有限，文中有些地方的结尾会出现我发病写下来的内容，如果影响观看，请读者自行无视。前面为追求速度翻译质量极差，如果觉得观感较差建议去lk观看文库版第一卷后再回来观看后续内容（第一卷看完后从第15话外传1开始）。从本书Web版第一部结局（第八十六话外传3：明年也会再见）开始，剧情进展比较缓慢，如果是喜欢单线的读者，建议看完第一部结局就当作本书完结处理。\n讨论Q群：683709204",
-      "_coverFile": "esjzone-1689480747.jpg",
-      "_coverType": "image/jpeg"
-    },
-    {
-      "mainTitle": "【完结】成为公主深爱的父亲",
-      "author": "선선한선풍기",
-      "coverImageUrl": "https://images.novelpia.com/imagebox/28/2836857f24a1a36c69d89a36fac67d74_14199902_1749712612_ori.file",
-      "lastReadPosition": {
-        "type": "chapter_name",
-        "value": "233的书库"
-      },
-      "links": [
-        {
-          "label": "esjzone",
-          "url": "https://www.esjzone.cc/detail/1747244006.html"
-        }
-      ],
-      "source": "esjzone",
-      "sourceId": "1747244006",
-      "sources": [
-        "esjzone"
-      ],
-      "tags": [
-        "R15+3",
-        "幻想",
-        "后宫",
-        "浪漫",
-        "重女",
-        "病娇",
-        "逆推",
-        "后悔",
-        "伪乱伦",
-        "父嫁"
-      ],
-      "description": "暂时托付女儿给我的皇帝驾崩了\n......\n突然之间，我成为了公主的父亲\n采用ds V3翻译润色，r圣精选之臭豆腐，不可不尝。\n也推荐大伙看看我翻的其他书：\n233的书库",
-      "_coverFile": "esjzone-1747244006.png",
-      "_coverType": "image/png"
-    },
-    {
-      "mainTitle": "今天是昨天，明天是今天",
-      "author": "犬",
-      "coverImageUrl": "https://s1.imagehub.cc/images/2025/05/30/6d6b7297e529fe1c0ac3c14f48bd6ed9.jpg",
-      "lastReadPosition": {
-        "type": "chapter_name",
-        "value": "左"
-      },
-      "links": [
-        {
-          "label": "esjzone",
-          "url": "https://www.esjzone.cc/detail/1744918591.html"
-        }
-      ],
-      "source": "esjzone",
-      "sourceId": "1744918591",
+      "sourceId": "1781633262",
       "sources": [
         "esjzone"
       ],
       "tags": [
         "R18",
-        "萝莉",
-        "养成",
-        "调教",
+        "后宫",
+        "奇幻",
         "日常",
-        "光源氏",
-        "纯爱"
+        "恋爱",
+        "学院",
+        "NTL",
+        "冒险者",
+        "BSS"
       ],
-      "description": "男人让花钱买来的少女服侍自己，作为回报则施以恩惠。\n在长久的共同生活中，情感逐渐滋生，他终于意识到，自己不知不觉间已将少女视为无可替代的家人，并对她产生了依赖。\n以男人的第一人称视角，追随着年龄差二十多岁的男女，缓慢而偏离正轨的生活。这是跨越二十二年，直至少女成为大人的物语。\n封面作者：\n川口イッサ @1ssaKawaguchi on X",
-      "_coverFile": "esjzone-1744918591.jpg",
-      "_coverType": "image/jpeg"
+      "description": "在主人公和女主入学的时候，我成为了学院的实战教官。\n机翻\n震惊了铁铁们！！原来隔壁机翻站是有这本书的，我之前想看没搜到才爬了生肉自己机翻来看，结果今天突然发现是我没有做成年人认证才没搜到....\n隔壁的是已经全部机翻完了，我想了一下既然都是机翻，那没必要继续翻了，如果有人想要继续翻的话可以接手噢(◕‿◕)\nb",
+      "_coverFile": "esjzone-1781633262.jpg",
+      "_coverType": "image/jpeg",
+      "id": "esjzone-1781633262"
     },
     {
-      "mainTitle": "我成为了背叛女主角们的幕后黑手",
-      "author": "아마테스형",
-      "coverImageUrl": "https://images.novelpia.com/imagebox/cover/12b4afb8c8ea7d391bea1ed6cc559077_13467513_q_ori.file",
+      "mainTitle": "病娇附身体质～因为骂娘被病娇包围了～",
+      "author": "하잘",
+      "coverImageUrl": "https://images.novelpia.com/imagebox/cover/9e01bbc611316f21fbc99f66f3abe07f_7311774_q_ori.file",
       "lastReadPosition": {
         "type": "chapter_name",
-        "value": "EP.51 奇迹般的故事(1)"
+        "value": "EP3.前往安徽之路-5"
       },
       "links": [
         {
           "label": "esjzone",
-          "url": "https://www.esjzone.cc/detail/1738797551.html"
+          "url": "https://www.esjzone.cc/detail/1740666012.html"
         }
       ],
       "source": "esjzone",
-      "sourceId": "1738797551",
+      "sourceId": "1740666012",
       "sources": [
         "esjzone"
       ],
       "tags": [
-        "机翻",
+        "R15+3",
+        "病娇",
+        "执着",
         "附身",
-        "学院",
-        "后宫",
-        "主角最强",
-        "奇幻",
-        "误解"
+        "机翻"
       ],
-      "description": "附身到了在结局时背叛的幕后黑手身上。\n我对世界毁灭没什么兴趣，所以悠闲地等待着结局的到来，可是······\n“请一直留在我身边 。对我来说，从始至终都只有公子大人您一人。 ”\n“不要离开我\n。\n与其孤零零被抛下……我宁可死掉算了。 ”\n奇怪的是，女主角们却不断地对我产生兴趣。\n=========================\n已经完结了的韩文网络小说\n小说角色致敬了童话《小王子》\n译者也是边看边翻，根据后面的内容可能对前文进行修改\n结合gemini和deepseek-v4 的韩语机翻润色，第一次翻译，难免有很多没做好的地方，还希望多包容。",
-      "_coverFile": "esjzone-1738797551.jpg",
-      "_coverType": "image/jpeg"
+      "description": "我成为了稳定维度的牺牲品。\n因为我亲切的慰问了说要让我转生的神的父母，所以变成了附身状态。\n注：将韩元除以200大概就是对应人民币的价值。",
+      "_coverFile": "esjzone-1740666012.png",
+      "_coverType": "image/png",
+      "id": "esjzone-1740666012"
     },
     {
-      "mainTitle": "拔出圣剑",
-      "author": "NariaTa",
-      "coverImageUrl": "https://images.novelpia.com/imagebox/cover/14dd9471980a9a9a8ff66281e2223723_4116328_q_ori.file",
+      "mainTitle": "韩轻书单",
+      "author": "神圣女主角帝国公民",
+      "coverImageUrl": "https://images.novelpia.com/imagebox/cover/41bac78bc38f9ff9866868505f72a481_536126_ori.file",
       "lastReadPosition": {
         "type": "chapter_name",
-        "value": "第89章 金币打造的钓钩(1)"
+        "value": "病娇附身体质～因为骂娘被病娇包围了～"
       },
       "links": [
         {
           "label": "esjzone",
-          "url": "https://www.esjzone.cc/detail/1743225217.html"
+          "url": "https://www.esjzone.cc/detail/1738832165.html"
         }
       ],
       "source": "esjzone",
-      "sourceId": "1743225217",
+      "sourceId": "1738832165",
+      "sources": [
+        "esjzone"
+      ],
+      "tags": [
+        "R18",
+        "书单",
+        "扫雷",
+        "评论",
+        "推荐"
+      ],
+      "description": "本书单是基于神圣女主角帝国群的群友们总结而来，只包含韩语轻小说内容，仅代表女主角群群友和参与评论的个人的观点，如有不同意的部分，请和谐讨论。\n欢迎大家在对应书目的章节下面发表自己的观点，我们群里也有很多本书没有人看过，欢迎补充。\n——群已经满人锁群了，请不要再私信问群号了，谢谢大家。\n韩语生肉提取韩语小说机翻教学[包括英肉教学]\nhttps://www.esjzone.one/detail/1744267467.html\n如果有站里已经上了但我还没贴链接的书可以在书单下面留言提醒我\nnovelpia生肉爬虫使用说明（需要novelpia会员）\nhttps://wwch.lanzoul.com/iNK7A2xs0ala",
+      "_coverFile": "esjzone-1738832165.png",
+      "_coverType": "image/png",
+      "id": "esjzone-1738832165"
+    },
+    {
+      "mainTitle": "天下第一的青梅竹马",
+      "author": "우비람",
+      "coverImageUrl": "https://p.sda1.dev/21/c357c3fe65546ce44181e9a1e13ce559/a_1_.jpg",
+      "lastReadPosition": {
+        "type": "chapter_name",
+        "value": "125.这种事我怎么会知道！？"
+      },
+      "links": [
+        {
+          "label": "esjzone",
+          "url": "https://www.esjzone.cc/detail/1724568952.html"
+        }
+      ],
+      "source": "esjzone",
+      "sourceId": "1724568952",
       "sources": [
         "esjzone"
       ],
       "tags": [
         "幻想",
-        "星座",
-        "剑术大师",
-        "热血",
-        "浪漫",
-        "骑士精神",
-        "王道",
-        "后宫（？）"
+        "武侠",
+        "后宫",
+        "回归",
+        "重女",
+        "养成(?)"
       ],
-      "description": "我在看不到星星的地方发誓。\n我会在夜空中刻上我自己的星星。",
-      "_coverFile": "esjzone-1743225217.png",
-      "_coverType": "image/png"
+      "description": "别做多余之事，先争取到那个位置吧…\n看到剧透言论会删除！！！\n机翻+润色\n几位大佬出了\n机翻教学\n，包含生肉获取，翻译器使用等。\n特别感谢\n蛤精\n大佬与VOID大佬。\n特别声明，本文机翻使用工具：\n▸\nKeywordGacha\n（术语表提取）\n▸\nLinguaGacha\n、\nAiNiee\n（翻译器）",
+      "_coverFile": "esjzone-1724568952.jpg",
+      "_coverType": "image/jpeg",
+      "id": "esjzone-1724568952"
     },
     {
-      "mainTitle": "关于以为转生到了萌系游戏大奖获奖作实际却是设定相似的洋馆恐怖游戏这件事",
-      "author": "シン・タロー",
-      "coverImageUrl": "https://p.sda1.dev/32/556683d47ddb050aee4dfe42e927d3e8/322602000211 _1_.jpg",
+      "mainTitle": "转生为和风幻想的抑郁色情游戏的路人战斗员但是周围的女人都是恶鬼只有不祥的预感",
+      "author": "鉄鋼怪人",
+      "coverImageUrl": null,
       "lastReadPosition": {
         "type": "chapter_name",
-        "value": "# 2"
+        "value": "图画展示栏"
       },
       "links": [
         {
           "label": "esjzone",
-          "url": "https://www.esjzone.cc/detail/1737610891.html"
+          "url": "https://www.esjzone.cc/detail/1658207522.html"
         }
       ],
       "source": "esjzone",
-      "sourceId": "1737610891",
+      "sourceId": "1658207522",
+      "sources": [
+        "esjzone"
+      ],
+      "tags": [
+        "冒险",
+        "转生",
+        "后宫",
+        "病娇",
+        "异世界",
+        "NTR"
+      ],
+      "description": "好像转生成了和风幻想游戏中的路人战斗员。\n游戏的类型是最高级的忧郁游戏\n本作属机翻+个人自润，有影响观看部分欢迎大家指出\nelsesky，补记：由于罐头留言筛选设置，\n直接在正文留言的话，\n有的留言提醒会消失看不到\n，如果在文中看到任何错误，麻烦使用错漏字回报功能提醒，我看到了会及时修正。谢谢了。\n郑重提醒：纯爱党慎入，如果你非要入，看看\n内容标签\n仔细斟酌一下\n预防万一再补一句，冲着NTR来的酋长们，这里面也没有你们想看的形式美的内容，散了吧\n反白，左下角，错漏字回报，全选就能看\n由于KY那边作者更新的内容有的时候sy这边没有，姑且丢个连接备份\nhttps://kakuyomu.jp/works/16816452220057184881\n作者现在更新周期是\n13个自然日\n，（但是作者觉得最近太热了，所以要再随机晚几天）不用每天来刷。\n不要在评论区刷水，违者必删\n周年纪念",
+      "id": "esjzone-1658207522"
+    },
+    {
+      "mainTitle": "【本篇完结】浪漫小说里的主角只喜欢我",
+      "author": "버베나",
+      "coverImageUrl": "https://p.sda1.dev/28/b79032712f9d009bef97d5ba979a37c1/mmexport1762028200127.jpg",
+      "lastReadPosition": {
+        "type": "chapter_name",
+        "value": "关于封面"
+      },
+      "links": [
+        {
+          "label": "esjzone",
+          "url": "https://www.esjzone.cc/detail/1747642248.html"
+        }
+      ],
+      "source": "esjzone",
+      "sourceId": "1747642248",
       "sources": [
         "esjzone"
       ],
       "otherTitles": [
-        "萌えゲーアワード受賞作に転生できたと思ったら設定が似てる洋館ホラゲーだった件"
+        "无限回归者讲浪漫小说"
       ],
-      "originalTitle": "萌えゲーアワード受賞作に転生できたと思ったら設定が似てる洋館ホラゲーだった件",
+      "originalTitle": "无限回归者讲浪漫小说",
+      "tags": [
+        "奇幻",
+        "回归",
+        "罗曼史",
+        "纯爱",
+        "系统",
+        "误解",
+        "痴女",
+        "无限回归"
+      ],
+      "description": "没落的贵族\n玛丽戈尔德\n直到你幸福为止\n群1005639252",
+      "_coverFile": "esjzone-1747642248.jpg",
+      "_coverType": "image/jpeg",
+      "id": "esjzone-1747642248"
+    },
+    {
+      "mainTitle": "转生为故事幕后主谋～用不断进化的魔剑和游戏知识压倒一切",
+      "author": "俺２号/結城 涼",
+      "coverImageUrl": "https://p.inari.site/usr/1309/696b28e27f481.png",
+      "lastReadPosition": {
+        "type": "chapter_name",
+        "value": "第三十六話 名为耶尔库克的精灵【前】"
+      },
+      "links": [
+        {
+          "label": "esjzone",
+          "url": "https://www.esjzone.cc/detail/1660575572.html"
+        }
+      ],
+      "source": "esjzone",
+      "sourceId": "1660575572",
+      "sources": [
+        "esjzone"
+      ],
+      "otherTitles": [
+        "物語の黒幕に転生して ～進化する魔剣とゲーム知識ですべてをねじ伏せる"
+      ],
+      "originalTitle": "物語の黒幕に転生して ～進化する魔剣とゲーム知識ですべてをねじ伏せる",
       "tags": [
         "R15",
-        "爱情喜剧",
-        "后宫",
-        "传奇",
-        "误会系",
+        "残酷描写",
+        "暴力描写",
+        "性描写",
+        "异世界",
         "转生",
-        "地雷系",
-        "俺寻思",
-        "搞笑",
-        "人外",
-        "魔物娘"
+        "剑与魔法",
+        "游戏世界",
+        "恋爱",
+        "多女主",
+        "贵族",
+        "大器晚成"
       ],
-      "description": "但是全员都被攻略了，所以没问题(⁠人⁠*⁠´⁠∀⁠｀⁠)⁠｡⁠*ﾟ⁠+\n深信自己转生到信奉的黄油【入住洋馆和奸吧♪和洋性咻♡】世界中的英一，喜出望外地造访了作为舞台的洋馆。\n面对冷酷的大屁股女仆。妖艳的长女、体弱多病有点阴沉的次女。以及狂傲的早熟三女，英一对即将上演的波涛汹涌色情日常充满期待。\n可是，这座洋馆其实是名为【豺狼之宴】、舞台背景和人物设定都与那款黄油极其相似的最吓人恐怖游戏的世界。\n英一对藏着残酷另一面的洋馆居民们一无所知，为了追求至高的成人场景而开始攻略。\n原文书籍化换了标题所以这边也换一下\n※旧题：你以为转生到了黄油里面？可惜，这是恐怖游戏哒/以为转生到获得萌游大奖的成人游戏中而高兴，实际却是设定相似的洋馆恐怖游戏/萌ゲーアワード受賞のアダルトゲーに転生したと喜んでたら実は設定が似通ったとある洋館ホラーゲーだった件\n-----------------------\n大家好，又是我真 纯爱战神开的新坑啦！\n这本书讲的是一个脑子秀逗的男主转生到了恐怖游戏世界利用俺寻思之力将所有地雷女主攻略的故事，希望大家能好好享受这充满误会系的展开！\n------------------------------\n由\nRozx\n和\n理想送别\n联合翻译(⁠ʘ⁠ᴗ⁠ʘ⁠✿⁠)\n2025.2.11，已追平原作进度，作者一般一到两周更新一次。\n2025.3.29，理想送别：补齐过去所有翻译中遗漏的注点，同时为配合注点更改了部分文字。\n⚠️\n注意：严禁剧透！剧透会被删留言哦！\n如果看见错字漏字或者语句不通顺的话，欢迎留言告知！\n------------------------------\n手机不知道为什么看不见动图，就放这里吧（悲",
-      "_coverFile": "esjzone-1737610891.jpg",
-      "_coverType": "image/jpeg"
+      "description": "*2025.7.18\n已经在机翻站上传了文库版第六卷，推荐看文库版本而不是Web版\n——————小说简介——————\n有一款风靡全球的游戏叫「七英雄传说」 。\n莲因为以世界最快的速度通关了那个游戏的续篇，得以下载某個特别的档案。\n但是，在游戏里的任何地方都找不到那个档案 。\n就在莲准备放弃寻找的瞬间，\n画面上出现了写着「 要开始一个特别的故事吗？」的信息。\n毫不犹豫地选择了『是』的莲，就这样失去了意识，接着醒来时变成了婴儿——\n难道，我转世成为「七英雄传说」里的主人公了!?\n莲一直认为这是不可能的，但当他从母亲口中听到自己的名字时，不禁怀疑起自己的耳朵。\n因为那个名字，是故事中途背叛主人公们的同学的名字。\n他当然希望和平地生活。\n但是，却被在游戏中自己夺走过性命的圣女相遇且被亲近，\n而且还拯救了本应死去的角色（大贵族的爱女）。\n这些事情重叠在一起，展开了他所不知道的情节……\n※这里是web版！\n文庫版是在web版的基础上进行了很多修改。\n第１章也有几个场景的改变，调整等。\n（a. 只要狼哥事件是從主角７歲發生的。文庫是10歲）\nb. 『\nSteal\n』事件在文庫被改掉了，所以只要有這個事件的\n，都是Web版\n）\n无关性别，为了能让更多的人喜欢，希望大家一定也能欣赏到文庫版……!\n※另外，漫画版以文庫版为基准。\n※各位读者大人有意見也請投稿。",
+      "_coverFile": "esjzone-1660575572.png",
+      "_coverType": "image/png",
+      "id": "esjzone-1660575572"
     },
     {
-      "mainTitle": "【完结】前男友已售罄",
-      "author": "막둥둥이",
-      "coverImageUrl": "https://gitee.com/AILIIS/tupian/raw/master/林彩妍-2 EE.jpg",
+      "mainTitle": "贞操逆转世界的童贞边境领主骑士",
+      "author": "道造",
+      "coverImageUrl": "https://cmoa.akamaized.net/data/image/title/title_1101357706/VOLUME/111013577060006.jpg",
       "lastReadPosition": {
         "type": "chapter_name",
-        "value": "EP.1 甲乙恋爱的终结"
+        "value": "第一百五十三话"
       },
       "links": [
         {
           "label": "esjzone",
-          "url": "https://www.esjzone.cc/detail/1743066797.html"
+          "url": "https://www.esjzone.cc/detail/1652100515.html"
         }
       ],
       "source": "esjzone",
-      "sourceId": "1743066797",
+      "sourceId": "1652100515",
       "sources": [
         "esjzone"
       ],
-      "otherTitles": [
-        "전 남친이 품절됐다"
-      ],
-      "originalTitle": "전 남친이 품절됐다",
       "tags": [
-        "R15+3",
-        "校园",
-        "现代",
+        "R15",
+        "残酷描写",
+        "转生",
+        "冒險",
+        "異世界",
+        "日常"
+      ],
+      "description": "全部纯机翻，润色靠脑补",
+      "_coverFile": "esjzone-1652100515.jpg",
+      "_coverType": "image/jpeg",
+      "id": "esjzone-1652100515"
+    },
+    {
+      "mainTitle": "使黑暗幻想正常化",
+      "author": "제팹가격인상니은",
+      "coverImageUrl": "https://images.novelpia.com/imagebox/cover/4b183b8581e86d45d764a4cd552eb341_288314_ori.file",
+      "lastReadPosition": {
+        "type": "chapter_name",
+        "value": "第91章 蓝莲花 克拉娜"
+      },
+      "links": [
+        {
+          "label": "esjzone",
+          "url": "https://www.esjzone.cc/detail/1739203440.html"
+        }
+      ],
+      "source": "esjzone",
+      "sourceId": "1739203440",
+      "sources": [
+        "esjzone"
+      ],
+      "tags": [
         "后宫",
-        "重女",
-        "病娇",
-        "修罗场",
-        "后悔系"
-      ],
-      "description": "我女朋友很仗势欺人。\n每当我的行为不合她心意时，她就会突然提出分手。\n然而，当我们真的分手后，她却总是围绕在我的身边。\n————————————————————————————————————\n新人接坑。\n本人外语0基础，边看边译，使用deepseek机翻+人工校对翻译，稍微带点润色。\n当初追这部小说刚看了一点就下架了，感到很遗憾，所以产生兴趣想补票。",
-      "_coverFile": "esjzone-1743066797.jpg",
-      "_coverType": "image/jpeg"
-    },
-    {
-      "mainTitle": "半吊子的圣职者想辞职",
-      "author": "와닷",
-      "coverImageUrl": "https://i.meee.com.tw/P8SE5yh.jpg",
-      "lastReadPosition": {
-        "type": "chapter_name",
-        "value": "第174话 恨罪不恨人"
-      },
-      "links": [
-        {
-          "label": "esjzone",
-          "url": "https://www.esjzone.cc/detail/1744487290.html"
-        }
-      ],
-      "source": "esjzone",
-      "sourceId": "1744487290",
-      "sources": [
-        "esjzone"
-      ],
-      "tags": [
-        "R15+3",
         "奇幻",
-        "病娇",
-        "后宫",
-        "误解"
+        "穿越",
+        "龙傲天",
+        "误解",
+        "欢乐"
       ],
-      "description": "[小说简介]\n我想辞职，请让我辞职吧！\n[译者的话]\n我只是...看到有病娇就进来了.jpg\n我觉得比较有意思的点是双时间线的叙事方式，主角在[过去]干的事歪打正着对[现在]产生了重大的影响，而主要的笔墨放在[现在]，先果后因的故事看得比较乐。\n那主角能否在众病娇的包围下成功辞职呢？拭目以待吧！\n[补充]d老师在翻译西幻题材时，有时候的用词会莫名变得文绉绉，如果有难以理解的对话或者情节可以在评论区说一下，我会进行适当的修改(会有一定的初润但是只能确保我能看懂，不太确保每个人都能看懂)\n[补充]文中过多的心理活动可能会影响叙事节奏，会进行少量的删改\n[补充]会根据叙事节奏适当调整部分剧情，以获得更好观感（就我个人而言）的特供版\n文本使用的是蛤精大佬给的deepseek v3机翻版本\n会进行一定（请不要抱有过多期待的程度！）的润色\n本人非常杂食，不过最喜欢的tag是病娇和逆推，如果看到有趣的韩轻也可以联系我进行翻译，因为novelpia看得头大，很难找到想看的书\n请各位多多指教！",
-      "_coverFile": "esjzone-1744487290.jpg",
-      "_coverType": "image/jpeg"
+      "description": "我所处于的世界是一个没有梦想或希望的黑暗奇幻游戏世界。\n完全没有感觉到。\ndeepseekv3机翻润色\n--------------------------------------------\n掌握了自动发文的方法，边发变润=v=，另外这作者真是一点也不关心插画，到现在都没有新的封面啊啊啊啊啊",
+      "_coverFile": "esjzone-1739203440.jpg",
+      "_coverType": "image/jpeg",
+      "id": "esjzone-1739203440"
     },
     {
-      "mainTitle": "【完结】圣女大人，请自重！",
-      "author": "papapa",
-      "coverImageUrl": "https://p.sda1.dev/31/3408977fb88caafc458d30197f9d9217/ZW770_2_S5~5P@EFVM6SMPC.jpg",
+      "mainTitle": "那个男人的第 101 个坏结局",
+      "author": "아리앗",
+      "coverImageUrl": "https://images.novelpia.com/imagebox/cover/4c64a47a99e73ef4a2b465f1ad811343_332125_ori.file",
       "lastReadPosition": {
         "type": "chapter_name",
-        "value": "051 你在听我说话吗?"
+        "value": "51"
       },
       "links": [
         {
           "label": "esjzone",
-          "url": "https://www.esjzone.cc/detail/1740101659.html"
+          "url": "https://www.esjzone.cc/detail/1746961363.html"
         }
       ],
       "source": "esjzone",
-      "sourceId": "1740101659",
+      "sourceId": "1746961363",
       "sources": [
         "esjzone"
       ],
-      "otherTitles": [
-        "성녀님, 천박하세요!"
-      ],
-      "originalTitle": "성녀님, 천박하세요!",
       "tags": [
-        "R15+3",
         "浪漫",
-        "奇幻",
-        "纯爱",
-        "身体互换",
-        "换身",
-        "TS",
-        "变嫁"
+        "幻想",
+        "后宫",
+        "后悔",
+        "回归",
+        "复仇"
       ],
-      "description": "圣女大人说着粗俗的话。\n“哇，辣椒。”（韩语里可以指男性的OO）\n在我的身体里。\n——————\n超绝1v1纯爱，看得我自动变区\npapapa作品推荐\nts娘幼儿园：1023944990\n——————\n2025.12.31 重译开始\n2026.3.22 重译完成\n——————\n2.26接坑。机翻润色。\n男主名字由厄舍→亚瑟\n8.20接坑。使用lingua和火山dsv3翻译后润色。\n应该...能做完\n预计以每天十话左右的进度更新\nR18章节会在标题用“*”标出",
-      "_coverFile": "esjzone-1740101659.jpg",
-      "_coverType": "image/jpeg"
+      "_coverFile": "esjzone-1746961363.png",
+      "_coverType": "image/png",
+      "id": "esjzone-1746961363"
     },
     {
       "mainTitle": "买下没落处女千金",
@@ -680,7 +726,8 @@
       "sourceId": "1725296106",
       "sources": [
         "esjzone"
-      ]
+      ],
+      "id": "esjzone-1725296106"
     },
     {
       "mainTitle": "无限回归者讲述故事",
@@ -700,7 +747,8 @@
       "sourceId": "1742794290",
       "sources": [
         "esjzone"
-      ]
+      ],
+      "id": "esjzone-1742794290"
     },
     {
       "mainTitle": "迷宫奇谭",
@@ -720,7 +768,8 @@
       "sourceId": "1748169570",
       "sources": [
         "esjzone"
-      ]
+      ],
+      "id": "esjzone-1748169570"
     },
     {
       "mainTitle": "【完结】女朋友对我太好了~",
@@ -740,7 +789,8 @@
       "sourceId": "1745136867",
       "sources": [
         "esjzone"
-      ]
+      ],
+      "id": "esjzone-1745136867"
     },
     {
       "mainTitle": "缺爱千金们的守护骑士",
@@ -760,7 +810,8 @@
       "sourceId": "1747221747",
       "sources": [
         "esjzone"
-      ]
+      ],
+      "id": "esjzone-1747221747"
     },
     {
       "mainTitle": "莫里亚蒂教授的合理性",
@@ -780,7 +831,8 @@
       "sourceId": "1727359809",
       "sources": [
         "esjzone"
-      ]
+      ],
+      "id": "esjzone-1727359809"
     },
     {
       "mainTitle": "暴君的喜爱过头了",
@@ -800,7 +852,8 @@
       "sourceId": "1749899968",
       "sources": [
         "esjzone"
-      ]
+      ],
+      "id": "esjzone-1749899968"
     },
     {
       "mainTitle": "我成为了学院的死灵法师",
@@ -820,7 +873,8 @@
       "sourceId": "1735301164",
       "sources": [
         "esjzone"
-      ]
+      ],
+      "id": "esjzone-1735301164"
     },
     {
       "mainTitle": "【完結】糟糕的重生",
@@ -840,7 +894,8 @@
       "sourceId": "1737252385",
       "sources": [
         "esjzone"
-      ]
+      ],
+      "id": "esjzone-1737252385"
     },
     {
       "mainTitle": "【完结】成为了无良队伍的累赘",
@@ -860,7 +915,8 @@
       "sourceId": "1739193294",
       "sources": [
         "esjzone"
-      ]
+      ],
+      "id": "esjzone-1739193294"
     },
     {
       "mainTitle": "附体转生炮灰角色♂的我绝对不会放弃TS！",
@@ -896,7 +952,8 @@
         "【書籍化決定】【本編完結】かませ役♂に憑依転生した俺はＴＳを諦めない"
       ],
       "description": "既然要转生，当然要转生成美少女。男人死后，附身转生到了自己爱看的现代迷宫系漫画的世界。然而，附身对象却是陪衬用的男性角色。 「为什么不是女孩子啊……！」 转生的话，美少女最好。 男人怀着如此理所当然的真理，以陪衬用的男性角色（已经没有戏分）的身份，为了达成目的而活下去。 目标是抢走原作一年后发生的转性事件，然后如愿转生成美少女！ 这是活在现代迷宫世界的探索者的故事。 也是被转性愿望烧尽脑细胞的男人的故事。 另外，由于转性愿望导致的女装行为，让原作的所有势力都把他视为未知的新势力而加以警戒，但这一点就先不考虑了。",
-      "wordCount": 2149529
+      "wordCount": 2149529,
+      "id": "novelia-16817330668626245437"
     },
     {
       "mainTitle": "转生成为和风奇幻忧郁黄游的无名战斗员，周遭的女性尽是些危险人物，让我只有不好的预感",
@@ -931,7 +988,8 @@
         "和風ファンタジーな鬱エロゲーの名無し戦闘員に転生したんだが周囲の女がヤベー奴ばかりで嫌な予感しかしない件"
       ],
       "description": "看来我转生成了和风奇幻游戏的无名路人角色……另外，游戏类型是情色暴力至上主义的抑郁系游戏。　追记　有连结到粉丝创作的段落，已加注●　　此外，本作品在Pixiv上也有人制作了介绍文，因此在此介绍。 https://dic.pixiv.net/a/%E9%97%87%E5%A4%9C%E3%81%AE%E8%9B%8D 漫画(一话~三话内容) https://www.pixiv.net/artworks/88830797",
-      "wordCount": 3782346
+      "wordCount": 3782346,
+      "id": "novelia-232822"
     },
     {
       "mainTitle": "想成为小白脸的我决定被病娇饲养",
@@ -969,7 +1027,8 @@
         "ヒモになりたい俺は、ヤンデレに飼われることにした"
       ],
       "description": "将来不想工作的话，被不良少年监禁就好了吧？\n\n\n\n身为堕落男子高中生的桐谷彰，得知同班同学美少女对自己有着病态的爱情，便向她提出被监禁的请求，并请她照顾到晚年。\n\n\n\n但是，爱他的病娇少女还有很多。\n\n\n\n偏离彰的想法，不知何时，故事进入了争夺彰监禁权的不良少年们的头脑战。\n\n到底彰能平安地成为不良少年的头目吗？\n\n\n\n这是一个关于人渣成为不良少年的绳子的故事。\n\n\n\n※KAKUYOMU也在连载中",
-      "wordCount": 447028
+      "wordCount": 447028,
+      "id": "novelia-n5955en"
     },
     {
       "mainTitle": "为了世界放弃与推角恋爱后病娇化的事件",
@@ -1004,7 +1063,8 @@
         "世界の為に推しとの恋愛を諦めようとしたらヤンデレ化された件"
       ],
       "description": "当我察觉这个世界是前世玩过的，恶魔与驱魔师全年无休互相厮杀的黑暗情色游戏世界时，我向成为我女友的她说了：「对不起……我们分手吧。」因为我得知她是与主角一起拯救世界的女主角。之后我只希望她能和主角一起想办法拯救世界——「我不会让你逃走的。绝对、绝对不会让你逃走……！」驱魔师前女友用比恶魔更像恶魔的表情逼近我……※本作同时在WEB小说投稿网站「HARUMEN」连载。※第一章已完结。※第二章连载中。",
-      "wordCount": 934486
+      "wordCount": 934486,
+      "id": "novelia-16818622173805248056"
     },
     {
       "mainTitle": "就这样少年在迷宫中奔跑着~成为了殴打勇者、魔王和神的平庸少年的故事~",
@@ -1038,7 +1098,8 @@
         "【書籍版４巻発売中！】かくして少年は迷宮を駆ける　　～勇者も魔王も神も殴る羽目になった凡庸なる少年の話～"
       ],
       "description": "①留下债务父母去世②妹妹被当作担保人身买卖③想买回1000枚金币连钱都没有。也没有地位。也没有力气。为了打破一切，少年踏入了迷宫。为了追求超越不讲理的金钱、地位和力量，少年在上升的迷宫中前进，打倒魔物，赏金斩头，孜孜不倦地取得实绩——没有时间说这些话，和容貌出众但人格崩溃的女人一起进行暴风雨般的试演。提炼并克服每天更新※※https://twitter.com/ob9ahe6cc7sk8no在twitter更新时告知(有时间有偏差时)※小说家吧,哈默尔恩-多投稿中",
-      "wordCount": 3299938
+      "wordCount": 3299938,
+      "id": "novelia-16817139558388003509"
     }
   ]
 }
