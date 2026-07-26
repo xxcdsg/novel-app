@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>小说阅读记录</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📚</text></svg>">
+</head>
+<body>
+  <header class="app-header">
+    <div class="header-inner">
+      <a href="#/" class="app-title">
+        <span class="logo">📚</span>
+        <span>小说阅读记录</span>
+      </a>
+      <nav class="header-nav">
+        <a href="#/" class="nav-link" data-route="/">书架</a>
+        <a href="#/add" class="nav-link" data-route="/add">添加</a>
+        <a href="#/sync" class="nav-link" data-route="/sync">同步</a>
+        <button id="theme-toggle" class="icon-btn" title="切换主题" type="button">🌙</button>
+      </nav>
+    </div>
+  </header>
+
+  <main id="app" class="app-main">
+    <div class="loading">加载中...</div>
+  </main>
+
+  <footer class="app-footer">
+    <span>数据存储于本地浏览器 · 可部署于 GitHub Pages</span>
+  </footer>
+
+  <div id="modal-root"></div>
+  <div id="toast-root"></div>
+
+  <script src="js/utils.js"></script>
+  <script src="js/db.js"></script>
+  <script src="js/components.js"></script>
+  <script src="js/views/listView.js"></script>
+  <script src="js/views/detailView.js"></script>
+  <script src="js/views/editView.js"></script>
+  <script src="js/views/syncView.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
