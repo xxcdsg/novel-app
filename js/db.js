@@ -214,7 +214,9 @@
           }
         }
       } else {
-        novel.id = Utils.uuid();
+        // 新增：保留导入数据中的 id（若有），否则生成 UUID
+        // 这样从 sync-data.json 恢复时，详情页 URL 能稳定访问
+        if (!novel.id) novel.id = Utils.uuid();
         await saveNovel(novel);
         byKey.set(novel.id, novel);
         byKey.set(matchKey(novel), novel);
