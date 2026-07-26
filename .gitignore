@@ -1,6 +1,5 @@
 # 凭据与本地数据（切勿提交到 git）
 sync/config.json
-sync/sync-data.json
 sync/cookies.json
 sync/debug_*.html
 

@@ -214,6 +214,44 @@
     return `t:${t}|a:${a}`;
   }
 
+  // 从 GitHub 上的 /sync/sync-data.json 加载备份
+  // 仅在 IndexedDB 为空且用户未禁用时执行
+  // 返回 true 表示已加载备份，false 表示跳过
+  async function initFromBackupIfEmpty() {
+    // 用户已主动关闭自动恢复，跳过
+    const disabled = await getSetting('autoRestoreDisabled', false);
+    if (disabled) return false;
+
+    // 已有数据，不自动加载
+    const existing = await getAllNovels();
+    if (existing.length > 0) return false;
+
+    try {
+      // 避免循环：检查 sessionStorage 标记（防止 fetch 失败后无限刷新）
+      if (sessionStorage.getItem('novel-restore-attempted')) {
+        return false;
+      }
+      sessionStorage.setItem('novel-restore-attempted', '1');
+
+      const resp = await fetch('sync/sync-data.json', { cache: 'no-store' });
+      if (!resp.ok) {
+        console.warn('[initFromBackupIfEmpty] sync-data.json not found:', resp.status);
+        return false;
+      }
+      const data = await resp.json();
+      if (!data || !Array.isArray(data.novels) || data.novels.length === 0) {
+        return false;
+      }
+      // 静默导入（merge 模式），不弹 toast
+      const result = await importAll(data, 'merge');
+      console.info(`[initFromBackupIfEmpty] 从备份恢复 ${result.added} 本小说`);
+      return result.added > 0;
+    } catch (e) {
+      console.warn('[initFromBackupIfEmpty] failed:', e);
+      return false;
+    }
+  }
+
   // Merge non-conflicting fields from src into dst
   function mergeNovel(dst, src) {
     let changed = false;
@@ -307,6 +345,7 @@
     novelToExportable,
     exportableToNovel,
     matchKey,
-    mergeNovel
+    mergeNovel,
+    initFromBackupIfEmpty
   };
 })(window);

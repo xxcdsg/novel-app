@@ -72,6 +72,18 @@
   async function init() {
     await initTheme();
     window.addEventListener('hashchange', route);
+
+    // 首次访问且 IndexedDB 为空时，自动从 GitHub 上的 sync/sync-data.json 恢复
+    try {
+      const restored = await DB.initFromBackupIfEmpty();
+      if (restored) {
+        // 用 toast 提示用户已自动恢复
+        Utils.toast('已从 GitHub 备份自动恢复阅读记录', 'success');
+      }
+    } catch (e) {
+      console.warn('[init] restore from backup failed:', e);
+    }
+
     await route();
   }
 

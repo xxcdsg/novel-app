@@ -512,6 +512,75 @@ def download_covers(session, records):
     return records
 
 
+# ===== Git 备份推送 =====
+
+def git_push_backup():
+    """提交并推送 sync/sync-data.json 到 GitHub，让 GitHub Pages 上的网站能加载最新备份。"""
+    log('推送备份到 GitHub...')
+    try:
+        # 检查是否在 git 仓库内
+        result = subprocess.run(
+            ['git', 'rev-parse', '--is-inside-work-tree'],
+            cwd=str(PROJECT_DIR), capture_output=True, text=True, timeout=10
+        )
+        if result.returncode != 0:
+            log('当前目录不是 git 仓库，跳过推送', 'warn')
+            return False
+
+        # 检查是否有 remote
+        result = subprocess.run(
+            ['git', 'remote'],
+            cwd=str(PROJECT_DIR), capture_output=True, text=True, timeout=10
+        )
+        if not result.stdout.strip():
+            log('未配置 git remote，跳过推送', 'warn')
+            return False
+
+        # 检查 sync-data.json 是否有改动
+        rel_path = SYNC_DATA_PATH.relative_to(PROJECT_DIR).as_posix()
+        result = subprocess.run(
+            ['git', 'status', '--porcelain', rel_path],
+            cwd=str(PROJECT_DIR), capture_output=True, text=True, timeout=10
+        )
+        if not result.stdout.strip():
+            log('sync-data.json 无改动，无需推送', 'ok')
+            return True
+
+        # git add
+        subprocess.run(['git', 'add', rel_path],
+                       cwd=str(PROJECT_DIR), check=True, capture_output=True, timeout=30)
+
+        # git commit
+        commit_msg = f'chore(sync): update sync-data.json ({datetime.now().strftime("%Y-%m-%d %H:%M")})'
+        result = subprocess.run(
+            ['git', 'commit', '-m', commit_msg],
+            cwd=str(PROJECT_DIR), capture_output=True, text=True, timeout=30
+        )
+        if result.returncode != 0:
+            # commit 可能因为 nothing to commit 失败，不算错误
+            dprint(f'commit 输出: {result.stdout} {result.stderr}')
+
+        # git push
+        result = subprocess.run(
+            ['git', 'push'],
+            cwd=str(PROJECT_DIR), capture_output=True, text=True, timeout=60
+        )
+        if result.returncode == 0:
+            log('备份已推送到 GitHub，Pages 会在 1-2 分钟后更新', 'ok')
+            return True
+        else:
+            log(f'git push 失败: {result.stderr.strip() or result.stdout.strip()}', 'err')
+            log('请手动执行: git push', 'warn')
+            return False
+    except subprocess.TimeoutExpired:
+        log('git 操作超时（可能等待认证），跳过推送', 'warn')
+        log('请手动执行: git add sync/sync-data.json && git commit && git push', 'warn')
+        return False
+    except Exception as e:
+        log(f'git 推送异常: {e}', 'err')
+        return False
+
+
 # ===== 主流程 =====
 
 def main():
@@ -519,6 +588,7 @@ def main():
     parser.add_argument('--no-browser', action='store_true', help='不自动打开浏览器')
     parser.add_argument('--debug', action='store_true', help='显示调试信息')
     parser.add_argument('--no-covers', action='store_true', help='不下载封面图')
+    parser.add_argument('--no-push', action='store_true', help='不自动 git push 备份到 GitHub')
     args = parser.parse_args()
 
     global DEBUG
@@ -591,6 +661,12 @@ def main():
     log(f'数据已保存到 {SYNC_DATA_PATH}', 'ok')
     log(f'共 {len(all_records)} 本小说', 'ok')
     print('=' * 60)
+
+    # 推送备份到 GitHub（让 GitHub Pages 上的网站能加载最新数据）
+    if not args.no_push:
+        git_push_backup()
+    else:
+        dprint('已跳过 git push（--no-push）')
 
     if not all_records:
         print('\n⚠ 未抓取到任何记录，请检查账号或网站结构是否变化')

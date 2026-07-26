@@ -88,6 +88,22 @@
           </div>
         </div>
 
+        <div class="sync-card">
+          <h2>☁️ GitHub 备份恢复</h2>
+          <div class="desc">
+            <p style="margin: 6px 0;">
+              仓库根目录的 <code>sync/sync-data.json</code> 是最近一次同步脚本生成的备份。
+              新设备/新浏览器首次打开本站时会自动从该备份恢复。
+            </p>
+            <p style="margin: 6px 0;" id="backup-info">正在读取备份信息...</p>
+          </div>
+          <div class="actions">
+            <button type="button" class="btn btn-primary btn-sm" id="restore-from-backup">☁️ 从备份恢复</button>
+            <button type="button" class="btn btn-sm" id="clear-and-restore">🔄 清空并恢复</button>
+            <button type="button" class="btn btn-sm" id="toggle-auto-restore">⚙️ 关闭自动恢复</button>
+          </div>
+        </div>
+
         <div class="sync-card" style="grid-column: 1 / -1;">
           <h2>ℹ️ 关于同步机制</h2>
           <div class="desc">
@@ -116,6 +132,31 @@
       await processImport(container, pendingImport, 'merge', true);
       // Clean URL
       history.replaceState(null, '', '#/sync');
+    } else {
+      // 没有自动导入，加载备份信息
+      loadBackupInfo(container);
+    }
+  }
+
+  // 加载并显示 GitHub 上 sync-data.json 的备份信息
+  async function loadBackupInfo(container) {
+    const infoEl = container.querySelector('#backup-info');
+    if (!infoEl) return;
+    try {
+      const resp = await fetch('sync/sync-data.json', { cache: 'no-store' });
+      if (!resp.ok) {
+        infoEl.innerHTML = `<span class="muted">未找到备份文件（HTTP ${resp.status}）</span>`;
+        return;
+      }
+      const data = await resp.json();
+      if (!data || !Array.isArray(data.novels)) {
+        infoEl.innerHTML = `<span class="muted">备份格式无效</span>`;
+        return;
+      }
+      const ts = data.exportedAt ? new Date(data.exportedAt).toLocaleString('zh-CN') : '未知';
+      infoEl.innerHTML = `备份包含 <strong>${data.novels.length}</strong> 本小说，导出时间：<strong>${ts}</strong>`;
+    } catch (e) {
+      infoEl.innerHTML = `<span class="muted">读取备份失败：${Utils.escapeHtml(e.message || e)}</span>`;
     }
   }
 
@@ -193,6 +234,60 @@
       await DB.clearAllNovels();
       Utils.toast('已清空全部记录', 'success');
       render(container, {});
+    };
+
+    // 从 GitHub 备份恢复（合并到现有数据）
+    container.querySelector('#restore-from-backup').onclick = async () => {
+      try {
+        showStatus(container, '正在从 GitHub 拉取备份...', 'info');
+        const resp = await fetch('sync/sync-data.json', { cache: 'no-store' });
+        if (!resp.ok) {
+          throw new Error(`备份文件不存在 (HTTP ${resp.status})`);
+        }
+        const data = await resp.json();
+        const mode = container.querySelector('#import-mode').value;
+        await processImport(container, data, mode, false);
+      } catch (e) {
+        showStatus(container, '从备份恢复失败：' + (e.message || e), 'error');
+      }
+    };
+
+    // 清空并恢复（先清空 IndexedDB，再从备份导入）
+    container.querySelector('#clear-and-restore').onclick = async () => {
+      const ok = await Utils.confirm(
+        '此操作会先清空当前所有数据，再从 GitHub 备份导入。是否继续？',
+        { danger: true, okText: '清空并恢复' }
+      );
+      if (!ok) return;
+      try {
+        showStatus(container, '清空数据中...', 'info');
+        await DB.clearAllNovels();
+        showStatus(container, '正在从 GitHub 拉取备份...', 'info');
+        const resp = await fetch('sync/sync-data.json', { cache: 'no-store' });
+        if (!resp.ok) {
+          throw new Error(`备份文件不存在 (HTTP ${resp.status})`);
+        }
+        const data = await resp.json();
+        await processImport(container, data, 'merge', false);
+        // 重新加载备份信息
+        loadBackupInfo(container);
+      } catch (e) {
+        showStatus(container, '恢复失败：' + (e.message || e), 'error');
+      }
+    };
+
+    // 开关自动恢复
+    const toggleBtn = container.querySelector('#toggle-auto-restore');
+    const updateToggleBtn = async () => {
+      const disabled = await DB.getSetting('autoRestoreDisabled', false);
+      toggleBtn.textContent = disabled ? '⚙️ 开启自动恢复' : '⚙️ 关闭自动恢复';
+    };
+    updateToggleBtn();
+    toggleBtn.onclick = async () => {
+      const disabled = await DB.getSetting('autoRestoreDisabled', false);
+      await DB.setSetting('autoRestoreDisabled', !disabled);
+      await updateToggleBtn();
+      Utils.toast(!disabled ? '已关闭自动恢复' : '已开启自动恢复', 'success');
     };
   }
 
