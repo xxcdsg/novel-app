@@ -12,6 +12,7 @@
 
 import argparse
 import base64
+import hashlib
 import json
 import os
 import re
@@ -577,6 +578,44 @@ def enrich_novelia_detail(session, out):
         except (TypeError, ValueError):
             pass
 
+    # 封面图：尝试多个可能的字段名
+    if not out.get('coverImageUrl'):
+        cover = (data.get('cover') or data.get('coverUrl') or
+                 data.get('coverImage') or data.get('img') or
+                 data.get('image') or data.get('imageUrl'))
+        if cover and isinstance(cover, str) and cover.strip():
+            cover = cover.strip()
+            # 相对路径补全为绝对路径
+            if cover.startswith('//'):
+                cover = 'https:' + cover
+            elif cover.startswith('/'):
+                cover = 'https://n.novelia.cc' + cover
+            out['coverImageUrl'] = cover
+
+    # novelia 详情 API 没有封面字段，根据 providerId 从原始 source 抓 OG 标签
+    # provider 映射：kakuyomu → kakuyomu.jp, syosetu → ncode.syosetu.com, hameln → syosetu.org
+    if not out.get('coverImageUrl') and api_url:
+        parts = api_url.rstrip('/').split('/')
+        if len(parts) >= 2:
+            provider_id = parts[-2]
+            novel_id = parts[-1]
+            src_url = None
+            if provider_id == 'kakuyomu':
+                src_url = f'https://kakuyomu.jp/works/{novel_id}'
+            elif provider_id == 'syosetu':
+                src_url = f'https://ncode.syosetu.com/{novel_id}/'
+            elif provider_id == 'hameln':
+                src_url = f'https://syosetu.org/novel/{novel_id}/'
+            if src_url:
+                try:
+                    src_resp = session.get(src_url, timeout=15)
+                    if src_resp.status_code == 200:
+                        og = extract_og_tags(src_resp.text)
+                        if og.get('og:image'):
+                            out['coverImageUrl'] = og['og:image']
+                except Exception as e:
+                    dprint(f'novelia 原始 source OG 抓取失败 ({provider_id}): {e}')
+
     # 类型（连载中/完结等）作为标签的一部分
     if data.get('type'):
         type_str = str(data['type']).strip()
@@ -697,7 +736,6 @@ def download_covers(session, records):
                 filename = f'{source}-{source_id}{ext}'
             else:
                 # fallback: 用 url 的 hash
-                import hashlib
                 url_hash = hashlib.md5(url.encode('utf-8')).hexdigest()[:12]
                 filename = f'{source}-{url_hash}{ext}'
 
@@ -721,7 +759,8 @@ def download_covers(session, records):
 # ===== Git 备份推送 =====
 
 def git_push_backup():
-    """提交并推送 sync/sync-data.json 到 GitHub，让 GitHub Pages 上的网站能加载最新备份。"""
+    """提交并推送 sync/ 目录到 GitHub（sync-data.json + images/ + sync.py），
+    让 GitHub Pages 上的网站能加载最新备份和图片。"""
     log('推送备份到 GitHub...')
     try:
         # 检查是否在 git 仓库内
@@ -742,22 +781,25 @@ def git_push_backup():
             log('未配置 git remote，跳过推送', 'warn')
             return False
 
-        # 检查 sync-data.json 是否有改动
-        rel_path = SYNC_DATA_PATH.relative_to(PROJECT_DIR).as_posix()
+        # 检查是否有改动（sync-data.json、images/、sync.py）
+        sync_rel = SYNC_DATA_PATH.relative_to(PROJECT_DIR).as_posix()
+        images_rel = (SCRIPT_DIR / 'images').relative_to(PROJECT_DIR).as_posix()
+        sync_py_rel = (SCRIPT_DIR / 'sync.py').relative_to(PROJECT_DIR).as_posix()
         result = subprocess.run(
-            ['git', 'status', '--porcelain', rel_path],
+            ['git', 'status', '--porcelain', sync_rel, images_rel, sync_py_rel],
             cwd=str(PROJECT_DIR), capture_output=True, text=True, timeout=10
         )
         if not result.stdout.strip():
-            log('sync-data.json 无改动，无需推送', 'ok')
+            log('无改动，无需推送', 'ok')
             return True
 
-        # git add
-        subprocess.run(['git', 'add', rel_path],
-                       cwd=str(PROJECT_DIR), check=True, capture_output=True, timeout=30)
+        # git add（分别添加，避免误提交 config.json）
+        for p in (sync_rel, images_rel, sync_py_rel):
+            subprocess.run(['git', 'add', p],
+                           cwd=str(PROJECT_DIR), check=True, capture_output=True, timeout=30)
 
         # git commit
-        commit_msg = f'chore(sync): update sync-data.json ({datetime.now().strftime("%Y-%m-%d %H:%M")})'
+        commit_msg = f'chore(sync): update sync-data.json + images ({datetime.now().strftime("%Y-%m-%d %H:%M")})'
         result = subprocess.run(
             ['git', 'commit', '-m', commit_msg],
             cwd=str(PROJECT_DIR), capture_output=True, text=True, timeout=30
@@ -780,7 +822,7 @@ def git_push_backup():
             return False
     except subprocess.TimeoutExpired:
         log('git 操作超时（可能等待认证），跳过推送', 'warn')
-        log('请手动执行: git add sync/sync-data.json && git commit && git push', 'warn')
+        log('请手动执行: git add sync/sync-data.json sync/images sync/sync.py && git commit && git push', 'warn')
         return False
     except Exception as e:
         log(f'git 推送异常: {e}', 'err')
@@ -819,7 +861,7 @@ def main():
             records = scrape_esjzone(session)
             log(f'抓取到 {len(records)} 条记录', 'ok')
             if records:
-                enrich_limit = config.get('enrich_limit', 20)
+                enrich_limit = config.get('enrich_limit', 200)
                 if enrich_limit > 0:
                     log('抓取详情页补充信息...')
                     records = enrich_with_og(session, records, 'https://www.esjzone.cc', limit=enrich_limit)
@@ -843,7 +885,7 @@ def main():
             records = scrape_novelia(session)
             log(f'抓取到 {len(records)} 条记录', 'ok')
             if records:
-                enrich_limit = config.get('enrich_limit', 20)
+                enrich_limit = config.get('enrich_limit', 200)
                 if enrich_limit > 0:
                     log('抓取详情页补充信息...')
                     records = enrich_with_og(session, records, 'https://n.novelia.cc', limit=enrich_limit)
@@ -878,6 +920,21 @@ def main():
             dprint(f'读取旧备份失败: {e}')
 
     # ----- 构建并保存数据 -----
+    # 为每条记录生成稳定 id（基于 source + sourceId），避免每次恢复生成不同 UUID
+    # 这样多设备/多会话恢复时同一本书的 id 一致，详情页链接可稳定访问
+    for r in all_records:
+        if r.get('id'):
+            continue
+        source = r.get('source') or 'unknown'
+        source_id = r.get('sourceId') or ''
+        if source_id:
+            stable = f'{source}-{source_id}'
+        else:
+            # 没有 sourceId 时，用 mainTitle+author 的 hash
+            key = f'{source}-{r.get("mainTitle", "")}-{r.get("author", "")}'
+            stable = f'{source}-{hashlib.md5(key.encode("utf-8")).hexdigest()[:12]}'
+        r['id'] = stable
+
     payload = {
         'format': 'novel-records-export',
         'version': 1,
