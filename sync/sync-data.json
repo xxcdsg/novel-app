@@ -1,8 +1,608 @@
 {
   "format": "novel-records-export",
   "version": 1,
-  "exportedAt": "2026-07-26T23:41:35.221632",
+  "exportedAt": "2026-07-26T23:43:08.657648",
   "novels": [
+    {
+      "mainTitle": "【完结】圣女大人，请自重！",
+      "author": "",
+      "coverImageUrl": null,
+      "lastReadPosition": {
+        "type": "chapter_name",
+        "value": "051 你在听我说话吗?"
+      },
+      "links": [
+        {
+          "label": "esjzone",
+          "url": "https://www.esjzone.cc/detail/1740101659.html"
+        }
+      ],
+      "source": "esjzone",
+      "sourceId": "1740101659",
+      "sources": [
+        "esjzone"
+      ]
+    },
+    {
+      "mainTitle": "无限回归者讲述故事",
+      "author": "",
+      "coverImageUrl": null,
+      "lastReadPosition": {
+        "type": "chapter_name",
+        "value": "60.统治者（Ⅳ）"
+      },
+      "links": [
+        {
+          "label": "esjzone",
+          "url": "https://www.esjzone.cc/detail/1742794290.html"
+        }
+      ],
+      "source": "esjzone",
+      "sourceId": "1742794290",
+      "sources": [
+        "esjzone"
+      ]
+    },
+    {
+      "mainTitle": "那个男人的第 101 个坏结局",
+      "author": "",
+      "coverImageUrl": null,
+      "lastReadPosition": {
+        "type": "chapter_name",
+        "value": "51"
+      },
+      "links": [
+        {
+          "label": "esjzone",
+          "url": "https://www.esjzone.cc/detail/1746961363.html"
+        }
+      ],
+      "source": "esjzone",
+      "sourceId": "1746961363",
+      "sources": [
+        "esjzone"
+      ]
+    },
+    {
+      "mainTitle": "买下没落处女千金",
+      "author": "",
+      "coverImageUrl": null,
+      "lastReadPosition": {
+        "type": "chapter_name",
+        "value": "130话"
+      },
+      "links": [
+        {
+          "label": "esjzone",
+          "url": "https://www.esjzone.cc/detail/1725296106.html"
+        }
+      ],
+      "source": "esjzone",
+      "sourceId": "1725296106",
+      "sources": [
+        "esjzone"
+      ]
+    },
+    {
+      "mainTitle": "使黑暗幻想正常化",
+      "author": "",
+      "coverImageUrl": null,
+      "lastReadPosition": {
+        "type": "chapter_name",
+        "value": "第91章 蓝莲花 克拉娜"
+      },
+      "links": [
+        {
+          "label": "esjzone",
+          "url": "https://www.esjzone.cc/detail/1739203440.html"
+        }
+      ],
+      "source": "esjzone",
+      "sourceId": "1739203440",
+      "sources": [
+        "esjzone"
+      ]
+    },
+    {
+      "mainTitle": "贞操逆转世界的童贞边境领主骑士",
+      "author": "",
+      "coverImageUrl": null,
+      "lastReadPosition": {
+        "type": "chapter_name",
+        "value": "第一百五十三话"
+      },
+      "links": [
+        {
+          "label": "esjzone",
+          "url": "https://www.esjzone.cc/detail/1652100515.html"
+        }
+      ],
+      "source": "esjzone",
+      "sourceId": "1652100515",
+      "sources": [
+        "esjzone"
+      ]
+    },
+    {
+      "mainTitle": "转生为故事幕后主谋～用不断进化的魔剑和游戏知识压倒一切",
+      "author": "",
+      "coverImageUrl": null,
+      "lastReadPosition": {
+        "type": "chapter_name",
+        "value": "第三十六話 名为耶尔库克的精灵【前】"
+      },
+      "links": [
+        {
+          "label": "esjzone",
+          "url": "https://www.esjzone.cc/detail/1660575572.html"
+        }
+      ],
+      "source": "esjzone",
+      "sourceId": "1660575572",
+      "sources": [
+        "esjzone"
+      ]
+    },
+    {
+      "mainTitle": "【本篇完结】浪漫小说里的主角只喜欢我",
+      "author": "",
+      "coverImageUrl": null,
+      "lastReadPosition": {
+        "type": "chapter_name",
+        "value": "关于封面"
+      },
+      "links": [
+        {
+          "label": "esjzone",
+          "url": "https://www.esjzone.cc/detail/1747642248.html"
+        }
+      ],
+      "source": "esjzone",
+      "sourceId": "1747642248",
+      "sources": [
+        "esjzone"
+      ]
+    },
+    {
+      "mainTitle": "转生为和风幻想的抑郁色情游戏的路人战斗员但是周围的女人都是恶鬼只有不祥的预感",
+      "author": "",
+      "coverImageUrl": null,
+      "lastReadPosition": {
+        "type": "chapter_name",
+        "value": "图画展示栏"
+      },
+      "links": [
+        {
+          "label": "esjzone",
+          "url": "https://www.esjzone.cc/detail/1658207522.html"
+        }
+      ],
+      "source": "esjzone",
+      "sourceId": "1658207522",
+      "sources": [
+        "esjzone"
+      ]
+    },
+    {
+      "mainTitle": "天下第一的青梅竹马",
+      "author": "",
+      "coverImageUrl": null,
+      "lastReadPosition": {
+        "type": "chapter_name",
+        "value": "125.这种事我怎么会知道！？"
+      },
+      "links": [
+        {
+          "label": "esjzone",
+          "url": "https://www.esjzone.cc/detail/1724568952.html"
+        }
+      ],
+      "source": "esjzone",
+      "sourceId": "1724568952",
+      "sources": [
+        "esjzone"
+      ]
+    },
+    {
+      "mainTitle": "韩轻书单",
+      "author": "",
+      "coverImageUrl": null,
+      "lastReadPosition": {
+        "type": "chapter_name",
+        "value": "病娇附身体质～因为骂娘被病娇包围了～"
+      },
+      "links": [
+        {
+          "label": "esjzone",
+          "url": "https://www.esjzone.cc/detail/1738832165.html"
+        }
+      ],
+      "source": "esjzone",
+      "sourceId": "1738832165",
+      "sources": [
+        "esjzone"
+      ]
+    },
+    {
+      "mainTitle": "病娇附身体质～因为骂娘被病娇包围了～",
+      "author": "",
+      "coverImageUrl": null,
+      "lastReadPosition": {
+        "type": "chapter_name",
+        "value": "EP3.前往安徽之路-5"
+      },
+      "links": [
+        {
+          "label": "esjzone",
+          "url": "https://www.esjzone.cc/detail/1740666012.html"
+        }
+      ],
+      "source": "esjzone",
+      "sourceId": "1740666012",
+      "sources": [
+        "esjzone"
+      ]
+    },
+    {
+      "mainTitle": "转生满25年的冒险家当上了学院教官",
+      "author": "",
+      "coverImageUrl": null,
+      "lastReadPosition": {
+        "type": "chapter_name",
+        "value": "同名同姓 -1-"
+      },
+      "links": [
+        {
+          "label": "esjzone",
+          "url": "https://www.esjzone.cc/detail/1781633262.html"
+        }
+      ],
+      "source": "esjzone",
+      "sourceId": "1781633262",
+      "sources": [
+        "esjzone"
+      ]
+    },
+    {
+      "mainTitle": "你以为我为什么想当肉盾？因为我是抖M哒！只是不知道为什么队友却都病了",
+      "author": "",
+      "coverImageUrl": null,
+      "lastReadPosition": {
+        "type": "chapter_name",
+        "value": "05　【红莲的剑圣】卡拉·冢本①"
+      },
+      "links": [
+        {
+          "label": "esjzone",
+          "url": "https://www.esjzone.cc/detail/1766507963.html"
+        }
+      ],
+      "source": "esjzone",
+      "sourceId": "1766507963",
+      "sources": [
+        "esjzone"
+      ]
+    },
+    {
+      "mainTitle": "在新手教程开始前，为了避免boss角色们被消灭我能做的几件事",
+      "author": "",
+      "coverImageUrl": null,
+      "lastReadPosition": {
+        "type": "chapter_name",
+        "value": "第四话：起源终末装置希明莱瓦·阿尔比恩（后篇）"
+      },
+      "links": [
+        {
+          "label": "esjzone",
+          "url": "https://www.esjzone.cc/detail/1689480747.html"
+        }
+      ],
+      "source": "esjzone",
+      "sourceId": "1689480747",
+      "sources": [
+        "esjzone"
+      ]
+    },
+    {
+      "mainTitle": "【完结】成为公主深爱的父亲",
+      "author": "",
+      "coverImageUrl": null,
+      "lastReadPosition": {
+        "type": "chapter_name",
+        "value": "233的书库"
+      },
+      "links": [
+        {
+          "label": "esjzone",
+          "url": "https://www.esjzone.cc/detail/1747244006.html"
+        }
+      ],
+      "source": "esjzone",
+      "sourceId": "1747244006",
+      "sources": [
+        "esjzone"
+      ]
+    },
+    {
+      "mainTitle": "今天是昨天，明天是今天",
+      "author": "",
+      "coverImageUrl": null,
+      "lastReadPosition": {
+        "type": "chapter_name",
+        "value": "左"
+      },
+      "links": [
+        {
+          "label": "esjzone",
+          "url": "https://www.esjzone.cc/detail/1744918591.html"
+        }
+      ],
+      "source": "esjzone",
+      "sourceId": "1744918591",
+      "sources": [
+        "esjzone"
+      ]
+    },
+    {
+      "mainTitle": "我成为了背叛女主角们的幕后黑手",
+      "author": "",
+      "coverImageUrl": null,
+      "lastReadPosition": {
+        "type": "chapter_name",
+        "value": "EP.51 奇迹般的故事(1)"
+      },
+      "links": [
+        {
+          "label": "esjzone",
+          "url": "https://www.esjzone.cc/detail/1738797551.html"
+        }
+      ],
+      "source": "esjzone",
+      "sourceId": "1738797551",
+      "sources": [
+        "esjzone"
+      ]
+    },
+    {
+      "mainTitle": "拔出圣剑",
+      "author": "",
+      "coverImageUrl": null,
+      "lastReadPosition": {
+        "type": "chapter_name",
+        "value": "第89章 金币打造的钓钩(1)"
+      },
+      "links": [
+        {
+          "label": "esjzone",
+          "url": "https://www.esjzone.cc/detail/1743225217.html"
+        }
+      ],
+      "source": "esjzone",
+      "sourceId": "1743225217",
+      "sources": [
+        "esjzone"
+      ]
+    },
+    {
+      "mainTitle": "关于以为转生到了萌系游戏大奖获奖作实际却是设定相似的洋馆恐怖游戏这件事",
+      "author": "",
+      "coverImageUrl": null,
+      "lastReadPosition": {
+        "type": "chapter_name",
+        "value": "# 2"
+      },
+      "links": [
+        {
+          "label": "esjzone",
+          "url": "https://www.esjzone.cc/detail/1737610891.html"
+        }
+      ],
+      "source": "esjzone",
+      "sourceId": "1737610891",
+      "sources": [
+        "esjzone"
+      ]
+    },
+    {
+      "mainTitle": "迷宫奇谭",
+      "author": "",
+      "coverImageUrl": null,
+      "lastReadPosition": {
+        "type": "chapter_name",
+        "value": "〈 第42话 〉 042 双子山"
+      },
+      "links": [
+        {
+          "label": "esjzone",
+          "url": "https://www.esjzone.cc/detail/1748169570.html"
+        }
+      ],
+      "source": "esjzone",
+      "sourceId": "1748169570",
+      "sources": [
+        "esjzone"
+      ]
+    },
+    {
+      "mainTitle": "【完结】女朋友对我太好了~",
+      "author": "",
+      "coverImageUrl": null,
+      "lastReadPosition": {
+        "type": "chapter_name",
+        "value": "EP.11 她梦寐以求的约会（3）"
+      },
+      "links": [
+        {
+          "label": "esjzone",
+          "url": "https://www.esjzone.cc/detail/1745136867.html"
+        }
+      ],
+      "source": "esjzone",
+      "sourceId": "1745136867",
+      "sources": [
+        "esjzone"
+      ]
+    },
+    {
+      "mainTitle": "缺爱千金们的守护骑士",
+      "author": "",
+      "coverImageUrl": null,
+      "lastReadPosition": {
+        "type": "chapter_name",
+        "value": "第1章：卡伦（1）"
+      },
+      "links": [
+        {
+          "label": "esjzone",
+          "url": "https://www.esjzone.cc/detail/1747221747.html"
+        }
+      ],
+      "source": "esjzone",
+      "sourceId": "1747221747",
+      "sources": [
+        "esjzone"
+      ]
+    },
+    {
+      "mainTitle": "莫里亚蒂教授的合理性",
+      "author": "",
+      "coverImageUrl": null,
+      "lastReadPosition": {
+        "type": "chapter_name",
+        "value": "第4话 波希米亚丑闻（1）"
+      },
+      "links": [
+        {
+          "label": "esjzone",
+          "url": "https://www.esjzone.cc/detail/1727359809.html"
+        }
+      ],
+      "source": "esjzone",
+      "sourceId": "1727359809",
+      "sources": [
+        "esjzone"
+      ]
+    },
+    {
+      "mainTitle": "暴君的喜爱过头了",
+      "author": "",
+      "coverImageUrl": null,
+      "lastReadPosition": {
+        "type": "chapter_name",
+        "value": "番外——穿越时间的女儿们（中）"
+      },
+      "links": [
+        {
+          "label": "esjzone",
+          "url": "https://www.esjzone.cc/detail/1749899968.html"
+        }
+      ],
+      "source": "esjzone",
+      "sourceId": "1749899968",
+      "sources": [
+        "esjzone"
+      ]
+    },
+    {
+      "mainTitle": "我成为了学院的死灵法师",
+      "author": "",
+      "coverImageUrl": null,
+      "lastReadPosition": {
+        "type": "chapter_name",
+        "value": "187. 答案"
+      },
+      "links": [
+        {
+          "label": "esjzone",
+          "url": "https://www.esjzone.cc/detail/1735301164.html"
+        }
+      ],
+      "source": "esjzone",
+      "sourceId": "1735301164",
+      "sources": [
+        "esjzone"
+      ]
+    },
+    {
+      "mainTitle": "半吊子的圣职者想辞职",
+      "author": "",
+      "coverImageUrl": null,
+      "lastReadPosition": {
+        "type": "chapter_name",
+        "value": "第174话 恨罪不恨人"
+      },
+      "links": [
+        {
+          "label": "esjzone",
+          "url": "https://www.esjzone.cc/detail/1744487290.html"
+        }
+      ],
+      "source": "esjzone",
+      "sourceId": "1744487290",
+      "sources": [
+        "esjzone"
+      ]
+    },
+    {
+      "mainTitle": "【完結】糟糕的重生",
+      "author": "",
+      "coverImageUrl": null,
+      "lastReadPosition": {
+        "type": "chapter_name",
+        "value": "222.魯哈爾(2)"
+      },
+      "links": [
+        {
+          "label": "esjzone",
+          "url": "https://www.esjzone.cc/detail/1737252385.html"
+        }
+      ],
+      "source": "esjzone",
+      "sourceId": "1737252385",
+      "sources": [
+        "esjzone"
+      ]
+    },
+    {
+      "mainTitle": "【完结】前男友已售罄",
+      "author": "",
+      "coverImageUrl": null,
+      "lastReadPosition": {
+        "type": "chapter_name",
+        "value": "EP.1 甲乙恋爱的终结"
+      },
+      "links": [
+        {
+          "label": "esjzone",
+          "url": "https://www.esjzone.cc/detail/1743066797.html"
+        }
+      ],
+      "source": "esjzone",
+      "sourceId": "1743066797",
+      "sources": [
+        "esjzone"
+      ]
+    },
+    {
+      "mainTitle": "【完结】成为了无良队伍的累赘",
+      "author": "",
+      "coverImageUrl": null,
+      "lastReadPosition": {
+        "type": "chapter_name",
+        "value": "88.女主角们都想找到我"
+      },
+      "links": [
+        {
+          "label": "esjzone",
+          "url": "https://www.esjzone.cc/detail/1739193294.html"
+        }
+      ],
+      "source": "esjzone",
+      "sourceId": "1739193294",
+      "sources": [
+        "esjzone"
+      ]
+    },
     {
       "mainTitle": "附体转生炮灰角色♂的我绝对不会放弃TS！",
       "author": "",
