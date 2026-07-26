@@ -627,11 +627,14 @@ def extract_og_tags(html):
 # ===== 封面图下载 =====
 
 def download_covers(session, records):
-    """下载封面图，转为 base64（嵌入到导入数据中）
+    """下载封面图，保存到 sync/images/ 文件夹，JSON 中只存文件名引用
 
     部分图床（如 novelpia.com）返回 Content-Type: application/octet-stream，
     但实际是图片。通过 URL 扩展名或文件头魔术字节判断。
     """
+    images_dir = SCRIPT_DIR / 'images'
+    images_dir.mkdir(exist_ok=True)
+
     downloaded = 0
     # 图片扩展名 -> MIME 类型映射
     img_ext_map = {
@@ -639,6 +642,11 @@ def download_covers(session, records):
         '.png': 'image/png', '.gif': 'image/gif',
         '.webp': 'image/webp', '.bmp': 'image/bmp',
         '.file': 'image/jpeg',  # novelpia 的 .file 实际是 jpg
+    }
+    # MIME -> 扩展名
+    mime_ext_map = {
+        'image/jpeg': '.jpg', 'image/png': '.png',
+        'image/gif': '.gif', 'image/webp': '.webp', 'image/bmp': '.bmp',
     }
     # 文件头魔术字节
     def sniff_image(content):
@@ -663,7 +671,7 @@ def download_covers(session, records):
             content_type = resp.headers.get('Content-Type', '')
             # 1. Content-Type 已是图片
             if 'image' in content_type:
-                final_type = content_type
+                final_type = content_type.split(';')[0].strip()
             # 2. 用文件头判断
             else:
                 sniffed = sniff_image(resp.content)
@@ -680,9 +688,29 @@ def download_covers(session, records):
                     if not final_type:
                         dprint(f'封面类型未知 {url}: Content-Type={content_type}')
                         continue
-            b64 = base64.b64encode(resp.content).decode('ascii')
-            r['_cover'] = b64
+
+            # 生成文件名：用 source + sourceId 保证唯一，没有则用 hash(url)
+            source = r.get('source', 'unknown')
+            source_id = r.get('sourceId') or ''
+            ext = mime_ext_map.get(final_type, '.jpg')
+            if source_id:
+                filename = f'{source}-{source_id}{ext}'
+            else:
+                # fallback: 用 url 的 hash
+                import hashlib
+                url_hash = hashlib.md5(url.encode('utf-8')).hexdigest()[:12]
+                filename = f'{source}-{url_hash}{ext}'
+
+            # 保存到 sync/images/
+            img_path = images_dir / filename
+            with open(img_path, 'wb') as f:
+                f.write(resp.content)
+
+            # JSON 中只存文件名引用（不再存 base64）
+            r['_coverFile'] = filename
             r['_coverType'] = final_type
+            # 删除旧的 _cover 字段（如果有）
+            r.pop('_cover', None)
             downloaded += 1
         except Exception as e:
             dprint(f'封面下载失败 {url}: {e}')

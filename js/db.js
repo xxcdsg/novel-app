@@ -125,13 +125,30 @@
   async function exportableToNovel(obj) {
     const novel = { ...obj };
     if (obj._cover) {
+      // 旧格式：base64 嵌入 JSON
       novel.coverImage = Utils.base64ToBlob(obj._cover, obj._coverType || 'image/jpeg');
       novel.coverImageType = obj._coverType;
+    } else if (obj._coverFile) {
+      // 新格式：图片文件引用，需要从 sync/images/ 加载
+      try {
+        const resp = await fetch('sync/images/' + encodeURIComponent(obj._coverFile));
+        if (resp.ok) {
+          const blob = await resp.blob();
+          novel.coverImage = blob;
+          novel.coverImageType = obj._coverType || blob.type || 'image/jpeg';
+        } else {
+          novel.coverImage = null;
+        }
+      } catch (e) {
+        console.warn('[exportableToNovel] 加载封面失败:', obj._coverFile, e);
+        novel.coverImage = null;
+      }
     } else {
       novel.coverImage = null;
     }
     delete novel._cover;
     delete novel._coverType;
+    delete novel._coverFile;
     novel.illustrations = (obj._illustrations || []).map(i => ({
       name: i.name,
       type: i.type,
@@ -215,24 +232,26 @@
   }
 
   // 从 GitHub 上的 /sync/sync-data.json 加载备份
-  // 仅在 IndexedDB 为空且用户未禁用时执行
+  // 仅在 IndexedDB 为空或缺少关键字段（如 description）且用户未禁用时执行
   // 返回 true 表示已加载备份，false 表示跳过
   async function initFromBackupIfEmpty() {
     // 用户已主动关闭自动恢复，跳过
     const disabled = await getSetting('autoRestoreDisabled', false);
     if (disabled) return false;
 
-    // 已有数据，不自动加载
+    // 避免循环：检查 sessionStorage 标记（防止 fetch 失败后无限刷新）
+    if (sessionStorage.getItem('novel-restore-attempted')) {
+      return false;
+    }
+    sessionStorage.setItem('novel-restore-attempted', '1');
+
     const existing = await getAllNovels();
-    if (existing.length > 0) return false;
+    // 检查是否需要恢复：IndexedDB 为空，或已有数据缺少 description 字段（旧数据）
+    const needRestore = existing.length === 0 ||
+      existing.some(n => !n.description && !n._coverFile && !n.coverImage);
+    if (!needRestore) return false;
 
     try {
-      // 避免循环：检查 sessionStorage 标记（防止 fetch 失败后无限刷新）
-      if (sessionStorage.getItem('novel-restore-attempted')) {
-        return false;
-      }
-      sessionStorage.setItem('novel-restore-attempted', '1');
-
       const resp = await fetch('sync/sync-data.json', { cache: 'no-store' });
       if (!resp.ok) {
         console.warn('[initFromBackupIfEmpty] sync-data.json not found:', resp.status);
@@ -244,8 +263,8 @@
       }
       // 静默导入（merge 模式），不弹 toast
       const result = await importAll(data, 'merge');
-      console.info(`[initFromBackupIfEmpty] 从备份恢复 ${result.added} 本小说`);
-      return result.added > 0;
+      console.info(`[initFromBackupIfEmpty] 从备份恢复: +${result.added} 新增, ${result.updated} 更新, ${result.skipped} 跳过`);
+      return result.added > 0 || result.updated > 0;
     } catch (e) {
       console.warn('[initFromBackupIfEmpty] failed:', e);
       return false;
